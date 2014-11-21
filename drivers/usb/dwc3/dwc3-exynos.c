@@ -128,6 +128,8 @@ static int dwc3_exynos_probe(struct platform_device *pdev)
 
 	exynos->dev	= dev;
 
+	exynos->dev	= dev;
+
 	exynos->clk = devm_clk_get(dev, "usbdrd30");
 	if (IS_ERR(exynos->clk)) {
 		dev_err(dev, "couldn't get clock\n");
