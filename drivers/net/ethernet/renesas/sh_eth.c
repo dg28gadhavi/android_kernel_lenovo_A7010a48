@@ -1132,17 +1132,13 @@ static void sh_eth_ring_format(struct net_device *ndev)
 
 		/* RX descriptor */
 		rxdesc = &mdp->rx_ring[i];
-		/* The size of the buffer is a multiple of 32 bytes. */
-		rxdesc->buffer_length = ALIGN(mdp->rx_buf_sz, 32);
-		dma_addr = dma_map_single(&ndev->dev, skb->data,
-					  rxdesc->buffer_length,
-					  DMA_FROM_DEVICE);
-		if (dma_mapping_error(&ndev->dev, dma_addr)) {
-			kfree_skb(skb);
-			break;
-		}
-		mdp->rx_skbuff[i] = skb;
-		rxdesc->addr = dma_addr;
+
+		/* The size of the buffer is a multiple of 16 bytes. */
+		rxdesc->buffer_length = ALIGN(mdp->rx_buf_sz, 16);
+		dma_map_single(&ndev->dev, skb->data, rxdesc->buffer_length,
+			       DMA_FROM_DEVICE);
+		rxdesc->addr = virt_to_phys(skb->data);
+
 		rxdesc->status = cpu_to_edmac(mdp, RD_RACT | RD_RFP);
 
 		/* Rx descriptor address set */
@@ -1484,7 +1480,8 @@ static int sh_eth_rx(struct net_device *ndev, u32 intr_status, int *quota)
 			mdp->rx_skbuff[entry] = skb;
 
 			skb_checksum_none_assert(skb);
-			rxdesc->addr = dma_addr;
+
+			rxdesc->addr = virt_to_phys(skb->data);
 		}
 		if (entry >= mdp->num_rx_ring - 1)
 			rxdesc->status |=
