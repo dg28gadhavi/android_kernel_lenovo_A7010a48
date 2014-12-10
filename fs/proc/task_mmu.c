@@ -510,6 +510,7 @@ struct mem_size_stats {
 	u64 swap_pss;
 };
 
+
 #ifdef CONFIG_SWAP
 static inline unsigned char swap_count(unsigned char ent)
 {
@@ -562,26 +563,9 @@ static void smaps_pte_entry(pte_t *pte, unsigned long addr,
 	} else if (is_swap_pte(*pte)) {
 		swp_entry_t swpent = pte_to_swp_entry(*pte);
 
-		/* M for pswap interface */
-		if (!non_swap_entry(swpent)) {
-			int mapcount;
-			u64 pss_delta = (u64)PAGE_SIZE << PSS_SHIFT;
-
+		if (!non_swap_entry(swpent))
 			mss->swap += PAGE_SIZE;
-			mapcount = swp_swapcount(swpent);
-			if (mapcount >= 2)
-				do_div(pss_delta, mapcount);
-			mss->swap_pss += pss_delta;
-#ifdef CONFIG_ZNDSWAP
-			/* It indicates 2ndswap ONLY */
-			if (swp_type(swpent) == 1UL)
-				mss->pswap_zndswap += pss_delta;
-			else
-				mss->pswap += pss_delta;
-#else
-			mss->pswap += pss_delta;
-#endif
-		} else if (is_migration_entry(swpent))
+		else if (is_migration_entry(swpent))
 			page = migration_entry_to_page(swpent);
 	} else if (pte_file(*pte)) {
 		if (pte_to_pgoff(*pte) != pgoff)
