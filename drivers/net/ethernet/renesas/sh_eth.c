@@ -1135,9 +1135,16 @@ static void sh_eth_ring_format(struct net_device *ndev)
 
 		/* The size of the buffer is a multiple of 16 bytes. */
 		rxdesc->buffer_length = ALIGN(mdp->rx_buf_sz, 16);
-		dma_map_single(&ndev->dev, skb->data, rxdesc->buffer_length,
-			       DMA_FROM_DEVICE);
-		rxdesc->addr = virt_to_phys(skb->data);
+
+		dma_addr = dma_map_single(&ndev->dev, skb->data,
+					  rxdesc->buffer_length,
+					  DMA_FROM_DEVICE);
+		if (dma_mapping_error(&ndev->dev, dma_addr)) {
+			kfree_skb(skb);
+			break;
+		}
+		mdp->rx_skbuff[i] = skb;
+		rxdesc->addr = dma_addr;
 
 		rxdesc->status = cpu_to_edmac(mdp, RD_RACT | RD_RFP);
 
@@ -1446,7 +1453,7 @@ static int sh_eth_rx(struct net_device *ndev, u32 intr_status, int *quota)
 			if (mdp->cd->rpadir)
 				skb_reserve(skb, NET_IP_ALIGN);
 			dma_unmap_single(&ndev->dev, rxdesc->addr,
-					 ALIGN(mdp->rx_buf_sz, 32),
+					 ALIGN(mdp->rx_buf_sz, 16),
 					 DMA_FROM_DEVICE);
 			skb_put(skb, pkt_len);
 			skb->protocol = eth_type_trans(skb, ndev);
@@ -1481,7 +1488,8 @@ static int sh_eth_rx(struct net_device *ndev, u32 intr_status, int *quota)
 
 			skb_checksum_none_assert(skb);
 
-			rxdesc->addr = virt_to_phys(skb->data);
+			rxdesc->addr = dma_addr;
+
 		}
 		if (entry >= mdp->num_rx_ring - 1)
 			rxdesc->status |=
