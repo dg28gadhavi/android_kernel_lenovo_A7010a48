@@ -340,6 +340,10 @@ static int xenbus_write_transaction(unsigned msg_type,
 			list_add(&trans->list, &u->transactions);
 		}
 	} else if (u->u.msg.type == XS_TRANSACTION_END) {
+		list_for_each_entry(trans, &u->transactions, list)
+			if (trans->handle.id == u->u.msg.tx_id)
+				break;
+		BUG_ON(&trans->list == &u->transactions);
 		list_del(&trans->list);
 		kfree(trans);
 	}
