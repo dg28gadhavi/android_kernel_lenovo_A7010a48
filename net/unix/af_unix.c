@@ -1036,7 +1036,7 @@ static int unix_bind(struct socket *sock, struct sockaddr *uaddr, int addr_len)
 			goto out_up;
 		}
 		addr->hash = UNIX_HASH_SIZE;
-		hash = d_backing_inode(dentry)->i_ino & (UNIX_HASH_SIZE - 1);
+		hash = d_backing_inode(path.dentry)->i_ino & (UNIX_HASH_SIZE-1);
 		spin_lock(&unix_table_lock);
 		u->path = u_path;
 		list = &unix_socket_table[hash];
