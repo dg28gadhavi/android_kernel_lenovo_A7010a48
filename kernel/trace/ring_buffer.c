@@ -2734,7 +2734,7 @@ trace_recursive_lock(struct ring_buffer_per_cpu *cpu_buffer)
 static __always_inline void
 trace_recursive_unlock(struct ring_buffer_per_cpu *cpu_buffer)
 {
-	cpu_buffer->current_context &= cpu_buffer->current_context - 1;
+	__this_cpu_and(current_context, __this_cpu_read(current_context) - 1);
 }
 
 #else
