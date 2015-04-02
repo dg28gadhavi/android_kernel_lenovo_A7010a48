@@ -350,6 +350,7 @@ static ssize_t arm_ccn_pmu_event_show(struct device *dev,
 			res += snprintf(buf + res, PAGE_SIZE - res,
 					",cmp_l=?,cmp_h=?,mask=?");
 		break;
+
 	case CCN_TYPE_MN:
 		res += snprintf(buf + res, PAGE_SIZE - res, ",node=%d", ccn->mn_id);
 		break;
