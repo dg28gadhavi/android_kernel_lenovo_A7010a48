@@ -1254,6 +1254,7 @@ xfs_fs_remount(
 			return -EINVAL;
 		}
 
+
 		if (XFS_SB_VERSION_NUM(sbp) == XFS_SB_VERSION_5 &&
 		    xfs_sb_has_ro_compat_feature(sbp,
 					XFS_SB_FEAT_RO_COMPAT_UNKNOWN)) {
