@@ -474,7 +474,7 @@ struct ring_buffer_per_cpu {
 	raw_spinlock_t			reader_lock;	/* serialize readers */
 	arch_spinlock_t			lock;
 	struct lock_class_key		lock_key;
-	unsigned long			nr_pages;
+	unsigned int			nr_pages;
 	unsigned int			current_context;
 	struct list_head		*pages;
 	struct buffer_page		*head_page;	/* read from head */
@@ -2734,7 +2734,7 @@ trace_recursive_lock(struct ring_buffer_per_cpu *cpu_buffer)
 static __always_inline void
 trace_recursive_unlock(struct ring_buffer_per_cpu *cpu_buffer)
 {
-	__this_cpu_and(current_context, __this_cpu_read(current_context) - 1);
+	cpu_buffer->current_context &= cpu_buffer->current_context - 1;
 }
 
 #else
@@ -2773,11 +2773,7 @@ ring_buffer_lock_reserve(struct ring_buffer *buffer, unsigned long length)
 	preempt_disable_notrace();
 
 	if (unlikely(atomic_read(&buffer->record_disabled)))
-
-		goto out_nocheck;
-
-	if (unlikely(trace_recursive_lock()))
-		goto out_nocheck;
+		goto out;
 
 	cpu = raw_smp_processor_id();
 
@@ -2795,6 +2791,9 @@ ring_buffer_lock_reserve(struct ring_buffer *buffer, unsigned long length)
 
 	if (unlikely(trace_recursive_lock(cpu_buffer)))
 
+		goto out;
+
+	if (unlikely(trace_recursive_lock(cpu_buffer)))
 		goto out;
 
 	event = rb_reserve_next_event(buffer, cpu_buffer, length);
