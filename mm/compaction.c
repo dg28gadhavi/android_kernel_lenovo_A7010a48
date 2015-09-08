@@ -446,6 +446,7 @@ isolate_fail:
 
 	}
 
+
 	if (locked)
 		spin_unlock_irqrestore(&cc->zone->lock, flags);
 
