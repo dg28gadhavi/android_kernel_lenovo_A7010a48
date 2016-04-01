@@ -586,22 +586,12 @@ int xt_compat_match_to_user(const struct xt_entry_match *m,
 }
 EXPORT_SYMBOL_GPL(xt_compat_match_to_user);
 
-/* non-compat version may have padding after verdict */
-struct compat_xt_standard_target {
-	struct compat_xt_entry_target t;
-	compat_uint_t verdict;
-};
-
-int xt_compat_check_entry_offsets(const void *base, const char *elems,
+int xt_compat_check_entry_offsets(const void *base,
 				  unsigned int target_offset,
 				  unsigned int next_offset)
 {
-	long size_of_base_struct = elems - (const char *)base;
 	const struct compat_xt_entry_target *t;
 	const char *e = base;
-
-	if (target_offset < size_of_base_struct)
-		return -EINVAL;
 
 	if (target_offset + sizeof(*t) > next_offset)
 		return -EINVAL;
@@ -613,18 +603,8 @@ int xt_compat_check_entry_offsets(const void *base, const char *elems,
 	if (target_offset + t->u.target_size > next_offset)
 		return -EINVAL;
 
-	if (strcmp(t->u.user.name, XT_STANDARD_TARGET) == 0 &&
-	    COMPAT_XT_ALIGN(target_offset + sizeof(struct compat_xt_standard_target)) != next_offset)
-		return -EINVAL;
+	return 0;
 
-	/* compat_xt_entry match has less strict aligment requirements,
-	 * otherwise they are identical.  In case of padding differences
-	 * we need to add compat version of xt_check_entry_match.
-	 */
-	BUILD_BUG_ON(sizeof(struct compat_xt_entry_match) != sizeof(struct xt_entry_match));
-
-	return xt_check_entry_match(elems, base + target_offset,
-				    __alignof__(struct compat_xt_entry_match));
 }
 EXPORT_SYMBOL(xt_compat_check_entry_offsets);
 #endif /* CONFIG_COMPAT */
@@ -637,6 +617,7 @@ EXPORT_SYMBOL(xt_compat_check_entry_offsets);
  * @next_offset: the arp/ip/ip6_t->next_offset
  *
  * validates that target_offset and next_offset are sane.
+ * Also see xt_compat_check_entry_offsets for CONFIG_COMPAT version.
  *
  * The arp/ip/ip6t_entry structure @base must have passed following tests:
  * - it must point to a valid memory location
