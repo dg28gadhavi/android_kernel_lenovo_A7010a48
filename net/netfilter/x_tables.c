@@ -633,126 +633,36 @@ EXPORT_SYMBOL(xt_compat_check_entry_offsets);
  * xt_check_entry_offsets - validate arp/ip/ip6t_entry
  *
  * @base: pointer to arp/ip/ip6t_entry
- * @elems: pointer to first xt_entry_match, i.e. ip(6)t_entry->elems
  * @target_offset: the arp/ip/ip6_t->target_offset
  * @next_offset: the arp/ip/ip6_t->next_offset
  *
- * validates that target_offset and next_offset are sane and that all
- * match sizes (if any) align with the target offset.
- *
- * This function does not validate the targets or matches themselves, it
- * only tests that all the offsets and sizes are correct, that all
- * match structures are aligned, and that the last structure ends where
- * the target structure begins.
- *
- * Also see xt_compat_check_entry_offsets for CONFIG_COMPAT version.
+ * validates that target_offset and next_offset are sane.
  *
  * The arp/ip/ip6t_entry structure @base must have passed following tests:
  * - it must point to a valid memory location
  * - base to base + next_offset must be accessible, i.e. not exceed allocated
  *   length.
  *
- * A well-formed entry looks like this:
- *
- * ip(6)t_entry   match [mtdata]  match [mtdata] target [tgdata] ip(6)t_entry
- * e->elems[]-----'                              |               |
- *                matchsize                      |               |
- *                                matchsize      |               |
- *                                               |               |
- * target_offset---------------------------------'               |
- * next_offset---------------------------------------------------'
- *
- * elems[]: flexible array member at end of ip(6)/arpt_entry struct.
- *          This is where matches (if any) and the target reside.
- * target_offset: beginning of target.
- * next_offset: start of the next rule; also: size of this rule.
- * Since targets have a minimum size, target_offset + minlen <= next_offset.
- *
- * Every match stores its size, sum of sizes must not exceed target_offset.
- *
  * Return: 0 on success, negative errno on failure.
  */
 int xt_check_entry_offsets(const void *base,
-			   const char *elems,
 			   unsigned int target_offset,
 			   unsigned int next_offset)
 {
-	long size_of_base_struct = elems - (const char *)base;
 	const struct xt_entry_target *t;
 	const char *e = base;
-
-	/* target start is within the ip/ip6/arpt_entry struct */
-	if (target_offset < size_of_base_struct)
-		return -EINVAL;
 
 	if (target_offset + sizeof(*t) > next_offset)
 		return -EINVAL;
 
 	t = (void *)(e + target_offset);
-	if (t->u.target_size < sizeof(*t))
-		return -EINVAL;
 
 	if (target_offset + t->u.target_size > next_offset)
 		return -EINVAL;
 
-	if (strcmp(t->u.user.name, XT_STANDARD_TARGET) == 0 &&
-	    XT_ALIGN(target_offset + sizeof(struct xt_standard_target)) != next_offset)
-		return -EINVAL;
-
-	return xt_check_entry_match(elems, base + target_offset,
-				    __alignof__(struct xt_entry_match));
+	return 0;
 }
 EXPORT_SYMBOL(xt_check_entry_offsets);
-
-/**
- * xt_alloc_entry_offsets - allocate array to store rule head offsets
- *
- * @size: number of entries
- *
- * Return: NULL or kmalloc'd or vmalloc'd array
- */
-unsigned int *xt_alloc_entry_offsets(unsigned int size)
-{
-	unsigned int *off;
-
-	off = kcalloc(size, sizeof(unsigned int), GFP_KERNEL | __GFP_NOWARN);
-
-	if (off)
-		return off;
-
-	if (size < (SIZE_MAX / sizeof(unsigned int)))
-		off = vmalloc(size * sizeof(unsigned int));
-
-	return off;
-}
-EXPORT_SYMBOL(xt_alloc_entry_offsets);
-
-/**
- * xt_find_jump_offset - check if target is a valid jump offset
- *
- * @offsets: array containing all valid rule start offsets of a rule blob
- * @target: the jump target to search for
- * @size: entries in @offset
- */
-bool xt_find_jump_offset(const unsigned int *offsets,
-			 unsigned int target, unsigned int size)
-{
-	int m, low = 0, hi = size;
-
-	while (hi > low) {
-		m = (low + hi) / 2u;
-
-		if (offsets[m] > target)
-			hi = m;
-		else if (offsets[m] < target)
-			low = m + 1;
-		else
-			return true;
-	}
-
-	return false;
-}
-EXPORT_SYMBOL(xt_find_jump_offset);
 
 int xt_check_target(struct xt_tgchk_param *par,
 		    unsigned int size, u_int8_t proto, bool inv_proto)
