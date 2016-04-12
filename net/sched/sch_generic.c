@@ -170,6 +170,7 @@ int sch_direct_xmit(struct sk_buff *skb, struct Qdisc *q,
 	} else {
 		spin_lock(root_lock);
 		return qdisc_qlen(q);
+
 	}
 
 	#ifdef CONFIG_MTK_NET_LOGGING
@@ -183,6 +184,7 @@ int sch_direct_xmit(struct sk_buff *skb, struct Qdisc *q,
 					pr_debug("[mtk_net][sched]warning: dev_hard_start_xmit ret = %d(%s), txq state = %lu\n",
 						 ret, dev->name, txq->state);
 		}
+
 	}
 	#endif
 
