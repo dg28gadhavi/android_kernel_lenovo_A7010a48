@@ -372,13 +372,23 @@ static irqreturn_t s5p_aes_interrupt(int irq, void *dev_id)
 
 	status = SSS_READ(dev, FCINTSTAT);
 	if (status & SSS_FCINTSTAT_BRDMAINT)
-
-		s5p_aes_rx(dev);
+		set_dma_rx = s5p_aes_rx(dev);
 	if (status & SSS_FCINTSTAT_BTDMAINT)
-		s5p_aes_tx(dev);
+		set_dma_tx = s5p_aes_tx(dev);
 
 	SSS_WRITE(dev, FCINTPEND, status);
 
+
+	/*
+	 * Writing length of DMA block (either receiving or transmitting)
+	 * will start the operation immediately, so this should be done
+	 * at the end (even after clearing pending interrupts to not miss the
+	 * interrupt).
+	 */
+	if (set_dma_tx)
+		s5p_set_dma_outdata(dev, dev->sg_dst);
+	if (set_dma_rx)
+		s5p_set_dma_indata(dev, dev->sg_src);
 
 	spin_unlock_irqrestore(&dev->lock, flags);
 
