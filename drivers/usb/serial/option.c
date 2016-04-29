@@ -390,7 +390,6 @@ static void option_instat_callback(struct urb *urb);
 #define CINTERION_PRODUCT_HC25_MDM		0x0047
 #define CINTERION_PRODUCT_HC28_MDMNET		0x004A /* same for HC28J */
 #define CINTERION_PRODUCT_HC28_MDM		0x004C
-#define CINTERION_PRODUCT_HC28_MDMNET	0x004A /* same for HC28J */
 #define CINTERION_PRODUCT_EU3_E			0x0051
 #define CINTERION_PRODUCT_EU3_P			0x0052
 #define CINTERION_PRODUCT_PH8			0x0053
