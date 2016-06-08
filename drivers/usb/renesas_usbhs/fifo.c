@@ -870,7 +870,6 @@ static void xfer_work(struct work_struct *work)
 	dma_async_issue_pending(chan);
 	usbhs_pipe_enable(pipe);
 
-
 xfer_work_end:
 	usbhs_unlock(priv, flags);
 }
