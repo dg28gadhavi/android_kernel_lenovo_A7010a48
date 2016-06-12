@@ -454,7 +454,11 @@ struct dentry *autofs4_expire_indirect(struct super_block *sb,
 
 		spin_lock(&sbi->fs_lock);
 		ino = autofs4_dentry_ino(dentry);
-		if (ino->flags & AUTOFS_INF_WANT_EXPIRE) {
+		if (ino->flags & AUTOFS_INF_WANT_EXPIRE)
+			expired = NULL;
+		else
+			expired = should_expire(dentry, mnt, timeout, how);
+		if (!expired) {
 			spin_unlock(&sbi->fs_lock);
 			continue;
 		}
@@ -470,14 +474,7 @@ struct dentry *autofs4_expire_indirect(struct super_block *sb,
 		spin_unlock(&sbi->fs_lock);
 		synchronize_rcu();
 
-		/* Make sure a reference is not taken on found if
-		 * things have changed.
-		 */
-		flags &= ~AUTOFS_EXP_LEAVES;
-		found = should_expire(expired, mnt, timeout, how);
-		if (!found || found != expired)
-			/* Something has changed, continue */
-			goto next;
+		ino->flags &= ~AUTOFS_INF_WANT_EXPIRE;
 
 		if (expired != dentry)
 			dput(dentry);
