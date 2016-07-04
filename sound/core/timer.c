@@ -1884,6 +1884,9 @@ static ssize_t snd_timer_user_read(struct file *file, char __user *buffer,
 			}
 		}
 
+		qhead = tu->qhead++;
+		tu->qhead %= tu->queue_size;
+		tu->qused--;
 		spin_unlock_irq(&tu->qlock);
 		if (err < 0)
 			goto _error;
@@ -1902,7 +1905,9 @@ static ssize_t snd_timer_user_read(struct file *file, char __user *buffer,
 			}
 		}
 
-		tu->qhead %= tu->queue_size;
+		spin_lock_irq(&tu->qlock);
+		if (err < 0)
+			goto _error;
 
 		result += unit;
 		buffer += unit;
