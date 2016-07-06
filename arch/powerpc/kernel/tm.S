@@ -466,7 +466,6 @@ restore_gprs:
 	 * until we turn MSR RI back on.
 	 */
 
-
 	SET_SCRATCH0(r1)
 	ld	r5, -8(r1)
 	ld	r1, -16(r1)
