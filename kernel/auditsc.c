@@ -1012,45 +1012,40 @@ static int audit_log_pid_context(struct audit_context *context, pid_t pid,
 	return rc;
 }
 
-/*
- * to_send and len_sent accounting are very loose estimates.  We aren't
- * really worried about a hard cap to MAX_EXECVE_AUDIT_LEN so much as being
- * within about 500 bytes (next page boundary)
- *
- * why snprintf?  an int is up to 12 digits long.  if we just assumed when
- * logging that a[%d]= was going to be 16 characters long we would be wasting
- * space in every audit message.  In one 7500 byte message we can log up to
- * about 1000 min size arguments.  That comes down to about 50% waste of space
- * if we didn't do the snprintf to find out how long arg_num_len was.
- */
-static int audit_log_single_execve_arg(struct audit_context *context,
-					struct audit_buffer **ab,
-					int arg_num,
-					size_t *len_sent,
-					const char __user *p,
-					char *buf)
+static void audit_log_execve_info(struct audit_context *context,
+				  struct audit_buffer **ab)
 {
-	char arg_num_len_buf[12];
-	const char __user *tmp_p = p;
-	/* how many digits are in arg_num? 5 is the length of ' a=""' */
-	size_t arg_num_len = snprintf(arg_num_len_buf, 12, "%d", arg_num) + 5;
-	size_t len, len_left, to_send;
-	size_t max_execve_audit_len = MAX_EXECVE_AUDIT_LEN;
-	unsigned int i, has_cntl = 0, too_long = 0;
-	int ret;
+	long len_max;
+	long len_rem;
+	long len_full;
+	long len_buf;
+	long len_abuf;
+	long len_tmp;
+	bool require_data;
+	bool encode;
+	unsigned int iter;
+	unsigned int arg;
+	char *buf_head;
+	char *buf;
+	const char __user *p = (const char __user *)current->mm->arg_start;
 
-	/* strnlen_user includes the null we don't want to send */
-	len_left = len = strnlen_user(p, MAX_ARG_STRLEN) - 1;
+	/* NOTE: this buffer needs to be large enough to hold all the non-arg
+	 *       data we put in the audit record for this argument (see the
+	 *       code below) ... at this point in time 96 is plenty */
+	char abuf[96];
 
-	/*
-	 * We just created this mm, if we can't find the strings
-	 * we just copied into it something is _very_ wrong. Similar
-	 * for strings that are too long, we should not have created
-	 * any.
-	 */
-	if (WARN_ON_ONCE(len < 0 || len > MAX_ARG_STRLEN - 1)) {
-		send_sig(SIGKILL, current, 0);
-		return -1;
+	/* NOTE: we set MAX_EXECVE_AUDIT_LEN to a rather arbitrary limit, the
+	 *       current value of 7500 is not as important as the fact that it
+	 *       is less than 8k, a setting of 7500 gives us plenty of wiggle
+	 *       room if we go over a little bit in the logging below */
+	WARN_ON_ONCE(MAX_EXECVE_AUDIT_LEN > 7500);
+	len_max = MAX_EXECVE_AUDIT_LEN;
+
+	/* scratch buffer to hold the userspace args */
+	buf_head = kmalloc(MAX_EXECVE_AUDIT_LEN + 1, GFP_KERNEL);
+	if (!buf_head) {
+		audit_panic("out of memory for argv string");
+		return;
 	}
 	buf = buf_head;
 
@@ -1112,6 +1107,7 @@ static int audit_log_single_execve_arg(struct audit_context *context,
 			}
 			len_buf += len_tmp;
 			buf_head[len_buf] = '\0';
+
 
 			/* length of the buffer in the audit record? */
 			len_abuf = (encode ? len_buf * 2 : len_buf + 2);
@@ -1189,7 +1185,6 @@ static int audit_log_single_execve_arg(struct audit_context *context,
 
 out:
 	kfree(buf_head);
-
 }
 
 static void show_special(struct audit_context *context, int *call_panic)
