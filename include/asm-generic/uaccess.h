@@ -230,7 +230,7 @@ extern int __put_user_bad(void) __attribute__((noreturn));
 	might_fault();						\
 	access_ok(VERIFY_READ, __p, sizeof(*ptr)) ?		\
 		__get_user((x), (__typeof__(*(ptr)) *)__p) :	\
-		-EFAULT;					\
+		((x) = (__typeof__(*(ptr)))0,-EFAULT);		\
 })
 
 #ifndef __get_user_fn
