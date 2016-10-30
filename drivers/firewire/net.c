@@ -637,6 +637,7 @@ static int fwnet_incoming_packet(struct fwnet_device *dev, __be32 *buf, int len,
 	datagram_label = fwnet_get_hdr_dgl(&hdr);
 	dg_size = fwnet_get_hdr_dg_size(&hdr);
 
+
 	if (fg_off + len > dg_size)
 		return 0;
 
