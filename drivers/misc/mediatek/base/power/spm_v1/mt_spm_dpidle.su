@@ -1,0 +1,17 @@
+mt_secure_api.h:47:21:mt_secure_call.constprop	0	static
+mt_spm_dpidle.c:973:13:spm_trigger_wfi_for_dpidle.isra.1.part.2	48	static
+mt_spm_dpidle.c:913:28:request_uart_to_sleep	0	static
+mt_spm_dpidle.c:918:28:request_uart_to_wakeup	0	static
+mt_spm_dpidle.c:924:29:aee_rr_rec_deepidle_val	0	static
+mt_spm_dpidle.c:928:28:aee_rr_curr_deepidle_val	0	static
+mt_spm_dpidle.c:934:29:mt_cirq_clone_gic	0	static
+mt_spm_dpidle.c:938:29:mt_cirq_enable	0	static
+mt_spm_dpidle.c:942:29:mt_cirq_flush	0	static
+mt_spm_dpidle.c:946:29:mt_cirq_disable	0	static
+mt_spm_dpidle.c:950:28:exec_ccci_kern_func_by_md_id	0	static
+mt_spm_dpidle.c:956:28:spm_get_sleep_wakesrc	0	static
+mt_spm_dpidle.c:961:29:mt_cpufreq_set_pmic_phase	0	static
+mt_spm_dpidle.c:1011:5:spm_set_dpidle_wakesrc	48	static
+mt_spm_dpidle.c:1109:15:spm_go_to_dpidle	224	static
+mt_spm_dpidle.c:1232:15:spm_go_to_sleep_dpidle	224	static
+mt_spm_dpidle.c:1336:6:spm_deepidle_init	112	static

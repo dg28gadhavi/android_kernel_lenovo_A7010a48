@@ -1,0 +1,5 @@
+mtk_cooler_kshutdown.c:27:12:mtk_cl_kshutdown_get_max_state	0	static
+mtk_cooler_kshutdown.c:34:12:mtk_cl_kshutdown_get_cur_state	0	static
+mtk_cooler_kshutdown.c:115:19:mtk_cooler_kshutdown_init	96	static
+mtk_cooler_kshutdown.c:45:12:mtk_cl_kshutdown_set_cur_state	16	static
+mtk_cooler_kshutdown.c:140:20:mtk_cooler_kshutdown_exit	48	static

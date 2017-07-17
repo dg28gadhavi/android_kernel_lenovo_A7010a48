@@ -1,0 +1,11 @@
+ccci_util_lib_fo.c:455:5:ccci_reserve_mem_of_init	48	static
+ccci_util_lib_fo.c:134:19:early_init_dt_get_chosen	48	static
+ccci_util_lib_fo.c:113:5:ccci_get_fo_setting	48	static
+ccci_util_lib_fo.c:210:5:get_modem_support_cap	32	static
+ccci_util_lib_fo.c:222:5:set_modem_support_cap	32	static
+ccci_util_lib_fo.c:251:5:get_md_resv_mem_info	0	static
+ccci_util_lib_fo.c:272:5:get_md1_md3_resv_smem_info	0	static
+ccci_util_lib_fo.c:286:14:get_md_smem_align	0	static
+ccci_util_lib_fo.c:291:14:get_modem_is_enabled	0	static
+ccci_util_lib_fo.c:444:6:ccci_md_mem_reserve	0	static
+ccci_util_lib_fo.c:491:5:ccci_util_fo_init	176	static

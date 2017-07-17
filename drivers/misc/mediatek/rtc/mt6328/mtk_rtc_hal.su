@@ -1,0 +1,14 @@
+mtk_rtc_hal.c:123:6:hal_rtc_set_abb_32k	16	static
+mtk_rtc_hal.c:130:6:hal_rtc_set_spare_timezone_value	48	static
+mtk_rtc_hal.c:154:5:hal_rtc_get_spare_timezone_value	32	static
+mtk_rtc_hal.c:178:5:hal_rtc_get_gpio_32k_status	32	static
+mtk_rtc_hal.c:192:6:hal_rtc_set_gpio_32k_status	48	static
+mtk_rtc_hal.c:224:6:hal_rtc_bbpu_pwdn	16	static
+mtk_rtc_hal.c:252:6:hal_rtc_get_pwron_alarm	48	static
+mtk_rtc_hal.c:266:6:hal_rtc_is_lp_irq	32	static
+mtk_rtc_hal.c:282:6:hal_rtc_is_pwron_alarm	48	static
+mtk_rtc_hal.c:306:6:hal_rtc_get_alarm	48	static
+mtk_rtc_hal.c:317:6:hal_rtc_set_alarm	16	static
+mtk_rtc_hal.c:328:6:hal_rtc_clear_alarm	48	static
+mtk_rtc_hal.c:342:6:hal_rtc_set_lp_irq	16	static
+mtk_rtc_hal.c:355:6:hal_rtc_save_pwron_time	32	static

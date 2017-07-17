@@ -1,0 +1,16 @@
+s5k3m2mipi_Sensor.c:3301:19:get_resolution	32	static
+s5k3m2mipi_Sensor.c:3336:19:get_info	32	static
+s5k3m2mipi_Sensor.c:282:19:read_cmos_sensor	32	static
+s5k3m2mipi_Sensor.c:292:13:write_cmos_sensor	32	static
+s5k3m2mipi_Sensor.c:308:13:write_cmos_sensor_8	32	static
+s5k3m2mipi_Sensor.c:2168:13:normal_capture_setting	80	static
+s5k3m2mipi_Sensor.c:2347:13:pip_capture_setting	80	static
+s5k3m2mipi_Sensor.c:1989:13:preview_setting	80	static
+s5k3m2mipi_Sensor.c:3039:19:close	16	static
+s5k3m2mipi_Sensor.c:485:13:set_mirror_flip.constprop	32	static
+s5k3m2mipi_Sensor.c:3066:19:preview.isra.10	32	static
+s5k3m2mipi_Sensor.c:3475:19:control	80	static
+s5k3m2mipi_Sensor.c:2956:19:open	112	static
+s5k3m2mipi_Sensor.c:325:13:set_max_framerate	96	static
+s5k3m2mipi_Sensor.c:3752:19:feature_control	96	static
+s5k3m2mipi_Sensor.c:3967:8:S5K3M2_MIPI_RAW_SensorInit	0	static

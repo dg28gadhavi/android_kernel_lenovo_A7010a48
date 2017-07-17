@@ -1,0 +1,11 @@
+core.c:117:12:rng_dev_open	0	static
+core.c:344:12:hwrng_fillfn	48	static
+core.c:365:13:start_khwrngd	32	static
+core.c:279:16:hwrng_attr_available_show	80	static
+core.c:260:16:hwrng_attr_current_show	32	static
+core.c:145:16:rng_dev_read	112	static
+core.c:79:13:add_early_randomness	48	static
+core.c:229:16:hwrng_attr_current_store	64	static
+core.c:472:20:hwrng_exit	32	static
+core.c:374:5:hwrng_register	80	static
+core.c:444:6:hwrng_unregister	64	static

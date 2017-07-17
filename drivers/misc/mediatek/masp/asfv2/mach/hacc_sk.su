@@ -1,0 +1,4 @@
+hacc_sk.c:103:14:hacc_set_key	0	static
+hacc_sk.c:159:14:hacc_do_aes	16	static
+hacc_sk.c:215:14:hacc_deinit	0	static
+hacc_sk.c:225:14:hacc_init	32	static

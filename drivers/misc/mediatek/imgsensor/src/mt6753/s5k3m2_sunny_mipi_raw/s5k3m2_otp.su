@@ -1,0 +1,13 @@
+s5k3m2_otp.c:843:12:CAM_CAL_i2c_remove	0	static
+s5k3m2_otp.c:683:12:CAM_CAL_Release	32	static
+s5k3m2_otp.c:894:20:CAM_CAL_i2C_exit	16	static
+s5k3m2_otp.c:853:12:CAM_CAL_remove	16	static
+s5k3m2_otp.c:818:12:CAM_CAL_i2c_probe	80	static
+s5k3m2_otp.c:272:13:s5k3m2_Ioctl_Compat	96	static
+s5k3m2_otp.c:848:12:CAM_CAL_probe	16	static
+s5k3m2_otp.c:658:12:CAM_CAL_Open	48	static
+s5k3m2_otp.c:877:19:CAM_CAL_i2C_init	32	static
+s5k3m2_otp.c:490:13:CAM_CAL_Ioctl	144	static
+s5k3m2_otp.c:154:6:selective_read_byte	80	static
+s5k3m2_otp.c:170:5:selective_read_region	64	static
+s5k3m2_otp.c:322:15:Read_MID_form_eeprom	32	static

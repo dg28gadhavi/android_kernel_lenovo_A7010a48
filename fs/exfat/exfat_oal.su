@@ -1,0 +1,4 @@
+exfat_oal.c:60:5:sm_init	0	static
+exfat_oal.c:66:5:sm_P	16	static
+exfat_oal.c:72:6:sm_V	16	static
+exfat_oal.c:125:14:tm_current	32	static

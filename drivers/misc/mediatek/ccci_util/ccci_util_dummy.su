@@ -1,0 +1,12 @@
+ccci_util_dummy.c:9:13:spm_is_md1_sleep	16	static
+ccci_util_dummy.c:14:13:spm_ap_mdsrc_req	16	static
+ccci_util_dummy.c:19:13:ccci_power_off	0	static
+ccci_util_dummy.c:23:12:exec_ccci_kern_func_by_md_id	16	static
+ccci_util_dummy.c:29:12:switch_sim_mode	16	static
+ccci_util_dummy.c:35:21:get_sim_switch_type	16	static
+ccci_util_dummy.c:41:21:get_modem_is_enabled	16	static
+ccci_util_dummy.c:47:12:register_ccci_sys_call_back	16	static
+ccci_util_dummy.c:53:21:mt_irq_get_pending	16	static
+ccci_util_dummy.c:59:13:notify_time_update	16	static
+ccci_util_dummy.c:64:22:ccci_get_md_boot_count	16	static
+ccci_util_dummy.c:69:15:ccci_get_ap_platform	16	static

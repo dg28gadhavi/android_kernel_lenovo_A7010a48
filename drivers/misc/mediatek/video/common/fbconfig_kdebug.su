@@ -1,0 +1,4 @@
+fbconfig_kdebug.c:139:5:fbconfig_get_esd_check	80	static
+fbconfig_kdebug.c:163:6:Panel_Master_DDIC_config	64	static
+fbconfig_kdebug.c:1464:6:PanelMaster_Init	0	static
+fbconfig_kdebug.c:1474:6:PanelMaster_Deinit	16	static

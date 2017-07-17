@@ -1,0 +1,12 @@
+sec_legacy.c:13:15:masp_secro_en	0	static
+sec_legacy.c:21:14:masp_secro_blk_sz	16	static
+sec_legacy.c:29:14:masp_secro_md_len	0	static
+sec_legacy.c:37:14:masp_secro_md_get_data	0	static
+sec_legacy.c:48:5:sec_modem_auth_enabled	0	static
+sec_legacy.c:56:5:sec_boot_key_init	0	static
+sec_legacy.c:63:5:masp_ccci_signfmt_verify_file	0	static
+sec_legacy.c:71:5:masp_ccci_version_info	0	static
+sec_legacy.c:76:5:sec_ccci_file_open	16	static
+sec_legacy.c:88:5:sec_ccci_file_close	16	static
+sec_legacy.c:94:5:masp_ccci_is_cipherfmt	0	static
+sec_legacy.c:99:5:masp_ccci_decrypt_cipherfmt	0	static

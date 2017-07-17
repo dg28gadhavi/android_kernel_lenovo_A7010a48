@@ -1,0 +1,13 @@
+super.c:3190:20:exit_ntfs_fs	32	static
+super.c:3072:23:ntfs_mount	16	static
+super.c:375:12:ntfs_write_volume_flags	64	static
+super.c:2678:12:ntfs_write_inode	16	static
+super.c:2272:13:ntfs_put_super	64	static
+super.c:3094:19:init_ntfs_fs	48	static
+super.c:3055:13:ntfs_big_inode_init_once	16	static
+super.c:583:13:is_boot_sector_ntfs	48	static
+super.c:2615:12:ntfs_statfs	112	static
+super.c:79:12:simple_getbool	32	static
+super.c:101:13:parse_options	160	static
+super.c:466:12:ntfs_remount	64	static
+super.c:2721:12:ntfs_fill_super	224	static

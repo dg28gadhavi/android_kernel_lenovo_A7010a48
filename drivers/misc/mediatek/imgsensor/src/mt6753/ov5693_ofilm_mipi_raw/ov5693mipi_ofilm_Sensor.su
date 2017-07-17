@@ -1,0 +1,17 @@
+ov5693mipi_ofilm_Sensor.c:2187:19:get_resolution	32	static
+ov5693mipi_ofilm_Sensor.c:2208:19:get_info	32	static
+ov5693mipi_ofilm_Sensor.c:187:13:write_cmos_sensor	32	static
+ov5693mipi_ofilm_Sensor.c:689:13:set_max_framerate	80	static
+ov5693mipi_ofilm_Sensor.c:1524:13:preview_setting	432	static
+ov5693mipi_ofilm_Sensor.c:175:19:read_cmos_sensor	32	static
+ov5693mipi_ofilm_Sensor.c:2036:19:close	16	static
+ov5693mipi_ofilm_Sensor.c:2063:19:preview.isra.6	32	static
+ov5693mipi_ofilm_Sensor.c:2311:19:control	64	static
+ov5693mipi_ofilm_Sensor.c:263:12:check_otp_wb	80	static
+ov5693mipi_ofilm_Sensor.c:543:12:update_otp_wb	96	static
+ov5693mipi_ofilm_Sensor.c:800:19:set_gain	96	static
+ov5693mipi_ofilm_Sensor.c:1187:13:sensor_init	352	static
+ov5693mipi_ofilm_Sensor.c:500:13:Read_otp_MID	64	static
+ov5693mipi_ofilm_Sensor.c:2487:19:feature_control	96	static
+ov5693mipi_ofilm_Sensor.c:1960:19:open	112	static
+ov5693mipi_ofilm_Sensor.c:2615:8:OV5693_OFILM_MIPI_RAW_SensorInit	0	static

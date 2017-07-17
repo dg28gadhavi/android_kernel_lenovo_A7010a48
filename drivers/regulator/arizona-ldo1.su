@@ -1,0 +1,8 @@
+arizona-ldo1.c:39:12:arizona_ldo1_hc_list_voltage	0	static
+arizona-ldo1.c:51:12:arizona_ldo1_hc_map_voltage	0	static
+arizona-ldo1.c:112:12:arizona_ldo1_hc_set_voltage_time_sel	0	static
+arizona-ldo1.c:316:1:arizona_ldo1_driver_init	16	static
+arizona-ldo1.c:91:12:arizona_ldo1_hc_get_voltage_sel	48	static
+arizona-ldo1.c:63:12:arizona_ldo1_hc_set_voltage_sel	32	static
+arizona-ldo1.c:316:1:arizona_ldo1_driver_exit	16	static
+arizona-ldo1.c:227:12:arizona_ldo1_probe	160	static

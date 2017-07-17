@@ -1,0 +1,16 @@
+mt_soc_pcm_dl1_awb.c:498:21:mtk_dl1_capture_pcm_page	16	static
+mt_soc_pcm_dl1_awb.c:487:12:mtk_capture_pcm_silence	16	static
+mt_soc_pcm_dl1_awb.c:139:12:mtk_dl1_awb_pcm_prepare	16	static
+mt_soc_pcm_dl1_awb.c:543:12:mtk_asoc_dl1_awb_pcm_new	16	static
+mt_soc_pcm_dl1_awb.c:607:20:mtk_soc_dl1_awb_platform_exit	16	static
+mt_soc_pcm_dl1_awb.c:557:12:mtk_dl1_awb_remove	32	static
+mt_soc_pcm_dl1_awb.c:526:12:mtk_dl1_awb_probe	32	static
+mt_soc_pcm_dl1_awb.c:334:12:mtk_dl1_awb_pcm_copy	96	static
+mt_soc_pcm_dl1_awb.c:155:26:mtk_dl1_awb_pcm_pointer	32	static
+mt_soc_pcm_dl1_awb.c:310:12:mtk_dl1_awb_pcm_trigger	32	static
+mt_soc_pcm_dl1_awb.c:240:12:mtk_dl1_capture_pcm_hw_free	32	static
+mt_soc_pcm_dl1_awb.c:295:12:mtk_dl1_awb_pcm_close	16	static
+mt_soc_pcm_dl1_awb.c:254:12:mtk_dl1_awb_pcm_open	48	static
+mt_soc_pcm_dl1_awb.c:549:12:mtk_afe_dl1_awb_probe	32	static
+mt_soc_pcm_dl1_awb.c:587:19:mtk_soc_dl1_awb_platform_init	16	static
+mt_soc_pcm_dl1_awb.c:207:12:mtk_dl1_awb_pcm_hw_params	64	static

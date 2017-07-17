@@ -1,0 +1,3 @@
+fixed.c:215:19:regulator_fixed_voltage_init	16	static
+fixed.c:108:12:reg_fixed_voltage_probe	128	static
+fixed.c:221:20:regulator_fixed_voltage_exit	16	static

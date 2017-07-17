@@ -1,0 +1,16 @@
+mtk_thermal_platform.c:469:20:mtk_thermal_platform_exit	0	static
+mtk_thermal_platform.c:87:12:get_sys_battery_info	128	static
+mtk_thermal_platform.c:437:12:mtk_thermal_validation_open	16	static
+mtk_thermal_platform.c:404:12:mtk_thermal_validation_rd	16	static
+mtk_thermal_platform.c:411:16:mtk_thermal_validation_wr	96	static
+mtk_thermal_platform.c:453:19:mtk_thermal_platform_init	16	static
+mtk_thermal_platform.c:120:12:get_sys_node.constprop	96	static
+mtk_thermal_platform.c:38:1:mtk_get_gpu_loading	16	static
+mtk_thermal_platform.c:45:1:force_get_tbat	16	static
+mtk_thermal_platform.c:474:5:mtk_thermal_get_cpu_info	144	static
+mtk_thermal_platform.c:505:5:mtk_thermal_get_gpu_info	64	static
+mtk_thermal_platform.c:534:5:mtk_thermal_get_batt_info	48	static
+mtk_thermal_platform.c:605:5:mtk_thermal_get_extra_info	96	static
+mtk_thermal_platform.c:664:5:mtk_thermal_force_get_batt_temp	16	static
+mtk_thermal_platform.c:676:14:mtk_thermal_set_user_scenarios	16	static
+mtk_thermal_platform.c:686:14:mtk_thermal_clear_user_scenarios	16	static

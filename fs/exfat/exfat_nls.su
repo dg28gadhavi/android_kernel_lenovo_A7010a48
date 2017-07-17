@@ -1,0 +1,8 @@
+exfat_nls.c:78:5:nls_upper	0	static
+exfat_nls.c:90:6:nls_wstrchr	0	static
+exfat_nls.c:100:5:nls_dosname_cmp	16	static
+exfat_nls.c:105:5:nls_uniname_cmp	0	static
+exfat_nls.c:118:6:nls_uniname_to_dosname	128	static
+exfat_nls.c:237:6:nls_dosname_to_uniname	96	static
+exfat_nls.c:290:6:nls_uniname_to_cstring	96	static
+exfat_nls.c:324:6:nls_cstring_to_uniname	640	static

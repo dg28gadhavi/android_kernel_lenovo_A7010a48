@@ -1,0 +1,4 @@
+alsps_factory.c:14:12:alsps_factory_release	0	static
+alsps_factory.c:20:13:alsps_factory_unlocked_ioctl	64	static
+alsps_factory.c:3:12:alsps_factory_open	16	static
+alsps_factory.c:217:5:alsps_factory_device_init	16	static

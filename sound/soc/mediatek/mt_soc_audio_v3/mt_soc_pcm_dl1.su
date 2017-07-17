@@ -1,0 +1,16 @@
+mt_soc_pcm_dl1.c:284:12:mtk_pcm_dl1_hw_free	0	static
+mt_soc_pcm_dl1.c:643:12:mtk_pcm_silence	0	static
+mt_soc_pcm_dl1.c:652:21:mtk_pcm_page	0	static
+mt_soc_pcm_dl1.c:679:12:mtk_asoc_pcm_dl1_new	0	static
+mt_soc_pcm_dl1.c:1130:19:mtk_soc_platform_init	16	static
+mt_soc_pcm_dl1.c:698:12:mtk_afe_remove	16	static
+mt_soc_pcm_dl1.c:495:12:mtk_pcm_copy	96	static
+mt_soc_pcm_dl1.c:183:26:mtk_pcm_pointer	48	static
+mt_soc_pcm_dl1.c:481:12:mtk_pcm_trigger	32	static
+mt_soc_pcm_dl1.c:372:12:mtk_pcm_prepare	48	static
+mt_soc_pcm_dl1.c:345:12:mtk_soc_pcm_dl1_close	32	static
+mt_soc_pcm_dl1.c:297:12:mtk_pcm_dl1_open	64	static
+mt_soc_pcm_dl1.c:688:12:mtk_asoc_dl1_probe	16	static
+mt_soc_pcm_dl1.c:1054:12:mtk_soc_dl1_probe	64	static
+mt_soc_pcm_dl1.c:1157:20:mtk_soc_platform_exit	16	static
+mt_soc_pcm_dl1.c:255:12:mtk_pcm_dl1_params	48	static

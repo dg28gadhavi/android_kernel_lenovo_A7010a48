@@ -1,0 +1,12 @@
+regmap-irq.c:142:13:regmap_irq_enable	0	static
+regmap-irq.c:151:13:regmap_irq_disable	0	static
+regmap-irq.c:160:12:regmap_irq_set_wake	0	static
+regmap-irq.c:189:20:regmap_irq_thread	64	static
+regmap-irq.c:301:12:regmap_irq_map	32	static
+regmap-irq.c:60:13:regmap_irq_sync_unlock	80	static
+regmap-irq.c:53:13:regmap_irq_lock	16	static
+regmap-irq.c:341:5:regmap_add_irq_chip	112	static
+regmap-irq.c:533:6:regmap_del_irq_chip	32	static
+regmap-irq.c:556:5:regmap_irq_chip_get_base	32	static
+regmap-irq.c:571:5:regmap_irq_get_virq	16	static
+regmap-irq.c:591:20:regmap_irq_get_domain	0	static

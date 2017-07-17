@@ -1,0 +1,7 @@
+arizona-micsupp.c:354:1:arizona_micsupp_driver_init	16	static
+arizona-micsupp.c:99:12:arizona_micsupp_set_bypass	48	static
+arizona-micsupp.c:87:12:arizona_micsupp_disable	32	static
+arizona-micsupp.c:74:12:arizona_micsupp_enable	32	static
+arizona-micsupp.c:44:13:arizona_micsupp_check_cp	64	static
+arizona-micsupp.c:354:1:arizona_micsupp_driver_exit	16	static
+arizona-micsupp.c:253:12:arizona_micsupp_probe	160	static

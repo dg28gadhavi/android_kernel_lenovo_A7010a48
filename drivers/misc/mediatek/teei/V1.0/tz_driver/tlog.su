@@ -1,0 +1,9 @@
+tlog.c:38:6:tlog_func	32	static
+tlog.c:13:6:init_tlog_entry	0	static
+tlog.c:23:5:search_tlog_entry	0	static
+tlog.c:49:13:tlog_handler	32	static
+tlog.c:78:6:init_tlog_buff_head	32	static
+tlog.c:104:5:tlog_print	32	static
+tlog.c:130:5:handle_tlog	80	static
+tlog.c:148:5:tlog_worker	64	static
+tlog.c:179:6:create_tlog_thread	64	static

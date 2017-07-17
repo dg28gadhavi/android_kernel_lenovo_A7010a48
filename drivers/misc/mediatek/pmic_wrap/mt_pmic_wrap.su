@@ -1,0 +1,12 @@
+mt_pmic_wrap.c:117:12:pwrap_suspend	16	static
+mt_pmic_wrap.c:125:13:pwrap_resume	16	static
+mt_pmic_wrap.c:103:16:mt_pwrap_store	32	static
+mt_pmic_wrap.c:136:19:mt_pwrap_init	32	static
+mt_pmic_wrap.c:95:16:mt_pwrap_show	16	static
+mt_pmic_wrap.c:32:29:get_mt_pmic_wrap_drv	0	static
+mt_pmic_wrap.c:37:5:check_pmic_wrap_init	0	static
+mt_pmic_wrap.c:48:5:pwrap_wacs2	16	static
+mt_pmic_wrap.c:58:5:pwrap_read	16	static
+mt_pmic_wrap.c:64:5:pwrap_write	16	static
+mt_pmic_wrap.c:76:5:pmic_wrap_eint_status	16	static
+mt_pmic_wrap.c:89:6:pmic_wrap_eint_clr	16	static

@@ -1,0 +1,3 @@
+collate.c:26:12:ntfs_collate_binary	48	static
+collate.c:44:12:ntfs_collate_ntofs_ulong	16	static
+collate.c:101:5:ntfs_collate	16	static

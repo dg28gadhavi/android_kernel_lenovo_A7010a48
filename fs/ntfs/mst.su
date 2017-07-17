@@ -1,0 +1,3 @@
+mst.c:42:5:post_read_mst_fixup	0	static
+mst.c:123:5:pre_write_mst_fixup	0	static
+mst.c:179:6:post_write_mst_fixup	0	static

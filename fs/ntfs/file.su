@@ -1,0 +1,4 @@
+file.c:2162:12:ntfs_file_fsync	48	static
+file.c:62:12:ntfs_file_open	16	static
+file.c:1779:16:ntfs_file_buffered_write.isra.10	704	static
+file.c:2117:16:ntfs_file_aio_write	96	static

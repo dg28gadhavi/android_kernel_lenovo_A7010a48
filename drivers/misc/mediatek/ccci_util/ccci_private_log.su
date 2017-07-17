@@ -1,0 +1,6 @@
+ccci_private_log.c:115:14:ccci_log_poll	32	static
+ccci_private_log.c:126:12:ccci_log_open	0	static
+ccci_private_log.c:134:12:ccci_log_close	0	static
+ccci_private_log.c:76:16:ccci_log_read	144	static
+ccci_private_log.c:35:5:ccci_log_write	736	static
+ccci_private_log.c:147:6:ccci_log_init	32	static

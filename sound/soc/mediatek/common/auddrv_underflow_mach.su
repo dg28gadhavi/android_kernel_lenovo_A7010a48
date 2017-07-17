@@ -1,0 +1,10 @@
+auddrv_underflow_mach.c:68:6:SetUnderFlowThreshold	0	static
+auddrv_underflow_mach.c:75:6:Auddrv_Aee_Dump	32	static
+auddrv_underflow_mach.c:106:6:Auddrv_Set_UnderFlow	48	static
+auddrv_underflow_mach.c:138:6:Auddrv_Set_Interrupt_Changed	0	static
+auddrv_underflow_mach.c:148:6:Auddrv_Reset_Dump_State	32	static
+auddrv_underflow_mach.c:158:6:Auddrv_CheckInterruptTiming	48	static
+auddrv_underflow_mach.c:197:6:RefineInterrruptInterval	16	static
+auddrv_underflow_mach.c:209:6:Auddrv_Set_DlSamplerate	32	static
+auddrv_underflow_mach.c:219:6:Auddrv_Set_InterruptSample	48	static
+auddrv_underflow_mach.c:233:6:Auddrv_Enable_dump	32	static

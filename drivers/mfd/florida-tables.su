@@ -1,0 +1,5 @@
+florida-tables.c:1848:13:florida_is_rev_b_adsp_memory	0	static
+florida-tables.c:1871:13:florida_is_rev_d_adsp_memory	0	static
+florida-tables.c:1906:13:florida_readable_register	16	static
+florida-tables.c:3070:13:florida_volatile_register	16	static
+florida-tables.c:253:5:florida_patch	16	static

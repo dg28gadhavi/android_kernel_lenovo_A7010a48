@@ -1,0 +1,4 @@
+ccci_support.c:14:6:ccci_reload_md_type	32	static
+ccci_support.c:23:22:ccci_get_common_setting	0	static
+ccci_support.c:32:5:ccci_store_sim_switch_mode	16	static
+ccci_support.c:43:5:ccci_get_sim_switch_mode	0	static

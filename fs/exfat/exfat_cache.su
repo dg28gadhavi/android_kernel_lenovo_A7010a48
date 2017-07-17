@@ -1,0 +1,15 @@
+exfat_cache.c:74:5:buf_init	0	static
+exfat_cache.c:125:5:buf_shutdown	0	static
+exfat_cache.c:384:5:FAT_getblk	48	static
+exfat_cache.c:139:5:FAT_read	64	static
+exfat_cache.c:419:6:FAT_modify	48	static
+exfat_cache.c:152:5:FAT_write	80	static
+exfat_cache.c:428:6:FAT_release_all	48	static
+exfat_cache.c:453:6:FAT_sync	48	static
+exfat_cache.c:532:5:buf_getblk	48	static
+exfat_cache.c:581:6:buf_modify	48	static
+exfat_cache.c:596:6:exfat_buf_lock	48	static
+exfat_cache.c:611:6:buf_unlock	48	static
+exfat_cache.c:626:6:buf_release	32	static
+exfat_cache.c:650:6:buf_release_all	48	static
+exfat_cache.c:675:6:buf_sync	48	static

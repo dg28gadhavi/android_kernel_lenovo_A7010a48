@@ -1,0 +1,4 @@
+compress.c:100:13:zero_partial_compressed_page	16	static
+compress.c:75:5:allocate_compression_buffers	32	static
+compress.c:90:6:free_compression_buffers	32	static
+compress.c:482:5:ntfs_read_compressed_block	400	dynamic

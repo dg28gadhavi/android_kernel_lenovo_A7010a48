@@ -1,0 +1,15 @@
+mt6605.c:772:12:mt6605_dev_open	32	static
+mt6605.c:1051:12:mt_nfc_pinctrl_select	16	static
+mt6605.c:1314:20:mt6605_dev_exit	16	static
+mt6605.c:488:12:mt6605_remove	64	static
+mt6605.c:1285:19:mt6605_dev_init	48	static
+mt6605.c:1171:12:mt_nfc_get_gpio_value	16	static
+mt6605.c:696:16:mt6605_dev_write	96	static
+mt6605.c:558:12:mt_nfc_remove	16	static
+mt6605.c:305:13:mt6605_disable_irq	32	static
+mt6605.c:318:12:mt6605_probe	96	static
+mt6605.c:536:12:mt_nfc_probe	48	static
+mt6605.c:565:13:mt6605_dev_irq_handler	32	static
+mt6605.c:788:13:mt6605_dev_unlocked_ioctl	64	static
+mt6605.c:587:16:mt6605_dev_read	128	static
+mt6605.c:1207:5:inform_nfc_vsim_change	96	static

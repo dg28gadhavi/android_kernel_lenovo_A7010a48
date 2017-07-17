@@ -1,0 +1,12 @@
+arizona-irq.c:157:13:arizona_irq_dummy	0	static
+arizona-irq.c:161:12:arizona_irq_set_wake	16	static
+arizona-irq.c:85:20:arizona_ctrlif_err	16	static
+arizona-irq.c:178:12:arizona_irq_map	32	static
+arizona-irq.c:29:12:arizona_map_irq.isra.2	48	static
+arizona-irq.c:98:20:arizona_irq_thread	48	static
+arizona-irq.c:76:20:arizona_boot_done	16	static
+arizona-irq.c:44:5:arizona_request_irq	64	static
+arizona-irq.c:56:6:arizona_free_irq	48	static
+arizona-irq.c:66:5:arizona_set_irq_wake	48	static
+arizona-irq.c:203:5:arizona_irq_init	80	static
+arizona-irq.c:449:5:arizona_irq_exit	32	static

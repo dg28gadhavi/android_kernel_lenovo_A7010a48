@@ -1,0 +1,13 @@
+mt_spm_sodi.c:899:27:request_uart_to_sleep	0	static
+mt_spm_sodi.c:904:27:request_uart_to_wakeup	0	static
+mt_spm_sodi.c:910:28:aee_rr_rec_sodi_val	0	static
+mt_spm_sodi.c:914:27:aee_rr_curr_sodi_val	0	static
+mt_spm_sodi.c:920:29:mt_cirq_clone_gic	0	static
+mt_spm_sodi.c:924:29:mt_cirq_enable	0	static
+mt_spm_sodi.c:928:29:mt_cirq_flush	0	static
+mt_spm_sodi.c:932:29:mt_cirq_disable	0	static
+mt_spm_sodi.c:979:6:spm_go_to_sodi	544	static
+mt_spm_sodi.c:1307:6:spm_sodi_mempll_pwr_mode	0	static
+mt_spm_sodi.c:1313:6:spm_enable_sodi	0	static
+mt_spm_sodi.c:1318:6:spm_get_sodi_en	0	static
+mt_spm_sodi.c:1343:6:spm_sodi_init	16	static

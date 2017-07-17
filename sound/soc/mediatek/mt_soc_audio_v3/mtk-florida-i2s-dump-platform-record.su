@@ -1,0 +1,13 @@
+mtk-florida-i2s-dump-platform-record.c:68:12:cpu_i2s2_record_trigger	16	static
+mtk-florida-i2s-dump-platform-record.c:58:12:cpu_i2s2_record_hw_params	16	static
+mtk-florida-i2s-dump-platform-record.c:49:12:cpu_i2s2_record_set_fmt	16	static
+mtk-florida-i2s-dump-platform-record.c:91:12:cpu_i2s2_record_set_clkdiv	16	static
+mtk-florida-i2s-dump-platform-record.c:79:12:cpu_i2s2_record_set_sysclk	16	static
+mtk-florida-i2s-dump-platform-record.c:112:12:cpu_i2s2_record_resume	16	static
+mtk-florida-i2s-dump-platform-record.c:106:12:cpu_i2s2_record_suspend	16	static
+mtk-florida-i2s-dump-platform-record.c:99:12:cpu_i2s2_record_probe	16	static
+mtk-florida-i2s-dump-platform-record.c:211:19:mtk_florida_i2s2_record_dai_init	16	static
+mtk-florida-i2s-dump-platform-record.c:195:12:cpu_iis2_record_dev_remove	32	static
+mtk-florida-i2s-dump-platform-record.c:182:12:cpu_iis2_record_dev_probe	32	static
+mtk-florida-i2s-dump-platform-record.c:40:12:cpu_i2s2_record_startup	32	static
+mtk-florida-i2s-dump-platform-record.c:218:20:mtk_florida_i2s2_record_dai_exit	16	static

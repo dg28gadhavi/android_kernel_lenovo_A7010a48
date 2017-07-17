@@ -1,0 +1,12 @@
+port_char.c:922:13:dev_char_compat_ioctl	16	static
+port_char.c:949:14:dev_char_poll	48	static
+port_char.c:1060:12:port_char_recv_req	48	static
+port_char.c:99:12:dev_char_close	64	static
+port_char.c:506:13:dev_char_ioctl	208	static
+port_char.c:388:16:dev_char_write	80	static
+port_char.c:159:16:dev_char_read	160	static
+port_char.c:988:12:port_char_init	32	static
+port_char.c:77:12:dev_char_open	48	static
+port_char.c:1120:13:port_char_md_state_notice	32	static
+port_char.c:1106:12:port_char_req_match	16	static
+port_char.c:1135:5:ccci_subsys_char_init	48	static

@@ -1,0 +1,7 @@
+mt_soc_dai_routing.c:85:12:mt6589_routing_trigger	16	static
+mt_soc_dai_routing.c:79:12:mt6589_routing_prepare	16	static
+mt_soc_dai_routing.c:73:12:mt6589_routing_startup	16	static
+mt_soc_dai_routing.c:181:19:mtk_routing_init	16	static
+mt_soc_dai_routing.c:149:12:mtk_routing_dev_remove	32	static
+mt_soc_dai_routing.c:129:12:mtk_routing_dev_probe	32	static
+mt_soc_dai_routing.c:204:20:mtk_routing_exit	16	static

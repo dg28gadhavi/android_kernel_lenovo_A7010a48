@@ -1,0 +1,8 @@
+mtk_cooler_cam.c:72:12:mtk_cl_cam_get_max_state	0	static
+mtk_cooler_cam.c:79:12:mtk_cl_cam_get_cur_state	0	static
+mtk_cooler_cam.c:86:12:mtk_cl_cam_set_cur_state	0	static
+mtk_cooler_cam.c:58:12:_cl_cam_open	32	static
+mtk_cooler_cam.c:32:16:_cl_cam_write	288	static
+mtk_cooler_cam.c:141:19:mtk_cooler_cam_init	80	static
+mtk_cooler_cam.c:50:12:_cl_cam_read	32	static
+mtk_cooler_cam.c:179:20:mtk_cooler_cam_exit	32	static

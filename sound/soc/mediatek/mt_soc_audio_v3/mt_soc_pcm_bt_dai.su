@@ -1,0 +1,16 @@
+mt_soc_pcm_bt_dai.c:517:21:mtk_bt_dai_capture_pcm_page	16	static
+mt_soc_pcm_bt_dai.c:506:12:mtk_bt_dai_capture_pcm_silence	16	static
+mt_soc_pcm_bt_dai.c:145:12:mtk_bt_dai_pcm_prepare	16	static
+mt_soc_pcm_bt_dai.c:561:12:mtk_asoc_bt_dai_pcm_new	16	static
+mt_soc_pcm_bt_dai.c:625:20:mtk_soc_bt_dai_platform_exit	16	static
+mt_soc_pcm_bt_dai.c:575:12:mtk_bt_dai_remove	32	static
+mt_soc_pcm_bt_dai.c:545:12:mtk_bt_dai_probe	32	static
+mt_soc_pcm_bt_dai.c:169:26:mtk_bt_dai_pcm_pointer	16	static
+mt_soc_pcm_bt_dai.c:354:12:mtk_bt_dai_pcm_copy	112	static
+mt_soc_pcm_bt_dai.c:330:12:mtk_bt_dai_pcm_trigger	48	static
+mt_soc_pcm_bt_dai.c:262:12:mtk_bt_dai_capture_pcm_hw_free	32	static
+mt_soc_pcm_bt_dai.c:316:12:mtk_bt_dai_pcm_close	16	static
+mt_soc_pcm_bt_dai.c:278:12:mtk_bt_dai_pcm_open	48	static
+mt_soc_pcm_bt_dai.c:567:12:mtk_asoc_bt_dai_probe	32	static
+mt_soc_pcm_bt_dai.c:605:19:mtk_soc_bt_dai_platform_init	16	static
+mt_soc_pcm_bt_dai.c:229:12:mtk_bt_dai_pcm_hw_params	64	static

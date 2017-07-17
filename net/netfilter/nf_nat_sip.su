@@ -1,0 +1,14 @@
+nf_nat_sip.c:626:20:nf_nat_sip_fini	16	static
+nf_nat_sip.c:316:13:nf_nat_sip_expected	96	static
+nf_nat_sip.c:32:21:mangle_packet	80	static
+nf_nat_sip.c:415:12:mangle_content_len	112	static
+nf_nat_sip.c:482:21:nf_nat_sdp_port	112	static
+nf_nat_sip.c:539:21:nf_nat_sdp_media	96	static
+nf_nat_sip.c:301:13:nf_nat_sip_seq_adjust	16	static
+nf_nat_sip.c:644:19:nf_nat_sip_init	16	static
+nf_nat_sip.c:341:21:nf_nat_sip_expect	208	static
+nf_nat_sip.c:90:12:map_addr	176	static
+nf_nat_sip.c:125:12:map_sip_addr	112	static
+nf_nat_sip.c:461:21:nf_nat_sdp_addr	192	static
+nf_nat_sip.c:500:21:nf_nat_sdp_session	160	static
+nf_nat_sip.c:143:21:nf_nat_sip	272	static

@@ -1,0 +1,10 @@
+exfat_blkdev.c:140:13:exfat_end_buffer_write_sync	48	static
+exfat_blkdev.c:59:5:bdev_init	0	static
+exfat_blkdev.c:64:5:bdev_shutdown	0	static
+exfat_blkdev.c:69:5:bdev_open	0	static
+exfat_blkdev.c:86:5:bdev_close	0	static
+exfat_blkdev.c:97:5:bdev_read	80	static
+exfat_blkdev.c:129:6:bdev_end_buffer_write	48	static
+exfat_blkdev.c:145:5:bdev_sync_dirty_buffer	48	static
+exfat_blkdev.c:173:5:bdev_write	64	static
+exfat_blkdev.c:226:5:bdev_sync	16	static

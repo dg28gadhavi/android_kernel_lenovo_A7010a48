@@ -1,0 +1,6 @@
+strobe_main_sid2_part1.c:315:12:constant_flashlight_open	48	static
+strobe_main_sid2_part1.c:165:29:ledTimeOutCallback	16	static
+strobe_main_sid2_part1.c:157:13:work_timeOutFunc	32	static
+strobe_main_sid2_part1.c:199:12:constant_flashlight_ioctl	64	static
+strobe_main_sid2_part1.c:348:12:constant_flashlight_release	48	static
+strobe_main_sid2_part1.c:374:9:strobeInit_main_sid2_part1	0	static

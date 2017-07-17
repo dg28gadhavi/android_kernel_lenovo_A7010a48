@@ -1,0 +1,9 @@
+otm1901_fhd_dsi_vdo_boe.c:1171:21:lcm_compare_id	16	static
+otm1901_fhd_dsi_vdo_boe.c:1082:13:lcm_suspend	96	static
+otm1901_fhd_dsi_vdo_boe.c:940:13:lcm_init	160	static
+otm1901_fhd_dsi_vdo_boe.c:1127:13:lcm_resume	16	static
+otm1901_fhd_dsi_vdo_boe.c:883:13:lcm_get_params	32	static
+otm1901_fhd_dsi_vdo_boe.c:877:13:lcm_set_util_funcs	16	static
+otm1901_fhd_dsi_vdo_boe.c:308:13:push_table.constprop	48	static
+otm1901_fhd_dsi_vdo_boe.c:829:13:lcm_setbacklight	32	static
+otm1901_fhd_dsi_vdo_boe.c:854:13:lcm_esd_recover_backlight	32	static

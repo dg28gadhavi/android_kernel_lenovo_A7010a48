@@ -1,0 +1,16 @@
+ddp_rdma_ex.c:240:5:rdma_enable_irq	64	static
+ddp_rdma_ex.c:262:5:rdma_start	64	static
+ddp_rdma_ex.c:273:5:rdma_stop	64	static
+ddp_rdma_ex.c:284:5:rdma_reset	64	static
+ddp_rdma_ex.c:206:14:rdma_intput_format_name	48	static
+ddp_rdma_ex.c:538:5:rdma_clock_on	32	static
+ddp_rdma_ex.c:561:5:rdma_clock_off	32	static
+ddp_rdma_ex.c:112:21:rdma_input_format_bpp	32	static
+ddp_rdma_ex.c:321:6:rdma_set_ultra	128	static
+ddp_rdma_ex.c:695:12:do_rdma_config_l	176	static
+ddp_rdma_ex.c:718:12:setup_rdma_sec	320	static
+ddp_rdma_ex.c:781:12:rdma_config_l	48	static
+ddp_rdma_ex.c:584:6:rdma_dump_reg	560	static
+ddp_rdma_ex.c:645:6:rdma_dump_analysis	656	static
+ddp_rdma_ex.c:672:12:rdma_dump	32	static
+ddp_rdma_ex.c:680:6:rdma_get_info	32	static

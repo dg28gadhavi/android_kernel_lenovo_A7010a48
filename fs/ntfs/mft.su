@@ -1,0 +1,10 @@
+mft.c:2012:12:ntfs_mft_record_layout	48	static
+mft.c:155:13:map_mft_record	64	static
+mft.c:213:6:unmap_mft_record	32	static
+mft.c:246:13:map_extent_mft_record	80	static
+mft.c:395:6:__mark_mft_record_dirty	32	static
+mft.c:465:5:ntfs_sync_mft_mirror	208	dynamic
+mft.c:669:5:write_mft_record_nolock	224	dynamic
+mft.c:925:6:ntfs_may_write_mft_record	96	static
+mft.c:2243:13:ntfs_mft_record_alloc	240	static
+mft.c:2784:5:ntfs_extent_mft_record_free	112	static

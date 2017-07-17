@@ -1,0 +1,3 @@
+lcnalloc.c:50:5:ntfs_cluster_free_from_rl_nolock	48	static
+lcnalloc.c:146:18:ntfs_cluster_alloc	256	static
+lcnalloc.c:849:5:__ntfs_cluster_free	128	static

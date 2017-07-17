@@ -1,0 +1,16 @@
+spi-gpio.c:856:19:gpio_spi_init	16	static
+spi-gpio.c:807:12:spi_gpio_remove	32	static
+spi-gpio.c:334:13:spi_gpio_chipselect	48	static
+spi-gpio.c:258:12:spi_gpio_txrx_word_mode0	48	static
+spi-gpio.c:267:12:spi_gpio_txrx_word_mode1	48	static
+spi-gpio.c:276:12:spi_gpio_txrx_word_mode2	48	static
+spi-gpio.c:285:12:spi_gpio_txrx_word_mode3	48	static
+spi-gpio.c:304:12:spi_gpio_spec_txrx_word_mode0	64	static
+spi-gpio.c:311:12:spi_gpio_spec_txrx_word_mode1	64	static
+spi-gpio.c:318:12:spi_gpio_spec_txrx_word_mode2	64	static
+spi-gpio.c:325:12:spi_gpio_spec_txrx_word_mode3	64	static
+spi-gpio.c:416:13:spi_gpio_cleanup	32	static
+spi-gpio.c:353:12:spi_gpio_setup	48	static
+spi-gpio.c:864:20:gpio_spi_exit	16	static
+spi-gpio.c:432:12:spi_gpio_alloc.isra.10	32	static
+spi-gpio.c:680:12:spi_gpio_probe	112	static

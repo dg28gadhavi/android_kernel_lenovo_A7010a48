@@ -1,0 +1,2 @@
+sec_lib.c:17:5:masp_hal_sbc_enabled	0	static
+sec_lib.c:22:5:masp_hal_get_sbc_checksum	0	static

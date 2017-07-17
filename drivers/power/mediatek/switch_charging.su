@@ -1,0 +1,16 @@
+switch_charging.c:1182:21:charging_full_check	32	static
+switch_charging.c:141:6:BATTERY_SetUSBState	32	static
+switch_charging.c:159:14:get_charging_setting_current	0	static
+switch_charging.c:716:6:get_usb_current_unlimited	0	static
+switch_charging.c:724:6:set_usb_current_unlimited	32	static
+switch_charging.c:736:6:select_charging_current_bcct	0	static
+switch_charging.c:993:14:set_chr_input_current_limit	16	static
+switch_charging.c:1097:6:select_charging_current	32	static
+switch_charging.c:1200:13:pchr_turn_on_charging	80	static
+switch_charging.c:1036:14:set_bat_charging_current_limit	32	static
+switch_charging.c:1351:12:BAT_PreChargeModeAction	32	static
+switch_charging.c:1379:12:BAT_ConstantCurrentModeAction	48	static
+switch_charging.c:1407:12:BAT_BatteryFullAction	64	static
+switch_charging.c:1505:12:BAT_BatteryHoldAction	48	static
+switch_charging.c:1524:12:BAT_BatteryStatusFailAction	32	static
+switch_charging.c:1555:6:mt_battery_charging_algorithm	32	static

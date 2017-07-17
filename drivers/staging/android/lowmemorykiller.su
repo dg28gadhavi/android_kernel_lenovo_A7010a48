@@ -1,0 +1,15 @@
+lowmemorykiller.c:128:1:task_notify_func	0	static
+lowmemorykiller.c:656:12:lowmem_adj_array_get	16	static
+lowmemorykiller.c:661:13:lowmem_adj_array_free	16	static
+lowmemorykiller.h:10:1:perf_trace_lowmemory_kill	384	static
+lowmemorykiller.h:10:1:ftrace_raw_event_lowmemory_kill	112	static
+lowmemorykiller.h:10:1:ftrace_raw_output_lowmemory_kill	32	static
+lowmemorykiller.c:598:20:lowmem_exit	32	static
+lowmemorykiller.c:644:12:lowmem_adj_array_set	48	static
+lowmemorykiller.c:152:22:lowmem_scan	256	static
+lowmemorykiller.c:763:12:debug_adj_set	16	static
+lowmemorykiller.c:574:19:lowmem_init	32	static
+lowmemorykiller.c:138:22:lowmem_count	0	static
+lowmemorykiller.h:10:1:ftrace_define_fields_lowmemory_kill	32	static
+lowmemorykiller.c:687:5:get_min_free_pages	96	static
+lowmemorykiller.c:727:8:query_lmk_minfree	0	static

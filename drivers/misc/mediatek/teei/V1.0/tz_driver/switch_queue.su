@@ -1,0 +1,8 @@
+switch_queue.c:152:5:add_work_entry	96	static
+switch_queue.c:181:5:get_call_type	0	static
+switch_queue.c:188:5:handle_sched_call	0	static
+switch_queue.c:195:5:handle_capi_call	112	static
+switch_queue.c:234:5:handle_fdrv_call	32	static
+switch_queue.c:266:5:handle_bdrv_call	32	static
+switch_queue.c:330:13:switch_fn	32	static
+switch_queue.c:293:5:handle_switch_call	0	static

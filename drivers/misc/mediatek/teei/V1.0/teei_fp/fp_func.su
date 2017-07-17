@@ -1,0 +1,8 @@
+fp_func.c:75:5:fp_release	0	static
+fp_func.c:153:16:fp_read	0	static
+fp_func.c:160:16:fp_write	0	static
+fp_func.c:166:15:fp_llseek	0	static
+fp_func.c:52:5:fp_open	112	static
+fp_func.c:82:13:fp_ioctl	80	static
+fp_func.c:244:6:fp_exit	32	static
+fp_func.c:196:5:fp_init	80	static

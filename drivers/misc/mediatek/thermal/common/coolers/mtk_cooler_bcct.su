@@ -1,0 +1,11 @@
+mtk_cooler_bcct.c:355:12:_cl_bcct_open	32	static
+mtk_cooler_bcct.c:324:12:_cl_bcct_read	48	static
+mtk_cooler_bcct.c:278:16:_cl_bcct_write	192	static
+mtk_cooler_bcct.c:116:12:mtk_cl_bcct_get_max_state	16	static
+mtk_cooler_bcct.c:370:19:mtk_cooler_bcct_init	112	static
+mtk_cooler_bcct.c:413:20:mtk_cooler_bcct_exit	48	static
+mtk_cooler_bcct.c:20:1:get_bat_charging_current_level	16	static
+mtk_cooler_bcct.c:123:12:mtk_cl_bcct_get_cur_state	48	static
+mtk_cooler_bcct.c:27:1:mt_get_charger_type	16	static
+mtk_cooler_bcct.c:34:1:set_bat_charging_current_limit	16	static
+mtk_cooler_bcct.c:132:12:mtk_cl_bcct_set_cur_state	48	static

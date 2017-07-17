@@ -1,0 +1,2 @@
+ccci_util_lib_main.c:34:19:ccci_util_init	16	static
+ccci_util_lib_main.c:29:5:ccci_parse_meta_md_setting	0	static

@@ -1,0 +1,2 @@
+mt_clkmgr_common_legacy.c:25:5:enable_clock	16	static
+mt_clkmgr_common_legacy.c:36:5:disable_clock	16	static

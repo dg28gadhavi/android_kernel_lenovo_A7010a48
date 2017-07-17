@@ -1,0 +1,16 @@
+musb_debugfs.c:468:12:musb_regr_show	16	static
+musb_debugfs.c:386:12:musb_regw_show	16	static
+musb_debugfs.c:479:12:musb_regr_open	16	static
+musb_debugfs.c:397:12:musb_regw_open	16	static
+musb_debugfs.c:184:12:musb_test_mode_open	16	static
+musb_debugfs.c:138:12:musb_regdump_open	16	static
+musb_debugfs.c:143:12:musb_test_mode_show	48	static
+musb_debugfs.c:111:12:musb_regdump_show	128	static
+musb_debugfs.c:323:17:my_strtoul.constprop	0	static
+musb_debugfs.c:402:16:musb_regw_mode_write	112	static
+musb_debugfs.c:484:16:musb_regr_mode_write	128	static
+musb_debugfs.c:189:6:musbdebugfs_otg_write_fifo	112	static
+musb_debugfs.c:198:6:musbdebugfs_h_setup	64	static
+musb_debugfs.c:212:16:musb_test_mode_write	128	static
+musb_debugfs.c:541:5:musb_init_debugfs	48	static
+musb_debugfs.c:588:27:musb_exit_debugfs	16	static

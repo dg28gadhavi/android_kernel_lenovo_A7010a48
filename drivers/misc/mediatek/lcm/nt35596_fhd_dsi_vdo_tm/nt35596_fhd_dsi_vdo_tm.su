@@ -1,0 +1,17 @@
+nt35596_fhd_dsi_vdo_tm.c:316:20:tps65132_iic_exit	16	static
+nt35596_fhd_dsi_vdo_tm.c:183:12:tps65132_remove	32	static
+nt35596_fhd_dsi_vdo_tm.c:286:12:tps65132_probe	32	static
+nt35596_fhd_dsi_vdo_tm.c:301:19:tps65132_iic_init	32	static
+nt35596_fhd_dsi_vdo_tm.c:831:21:lcm_compare_id	16	static
+nt35596_fhd_dsi_vdo_tm.c:744:13:lcm_suspend	96	static
+nt35596_fhd_dsi_vdo_tm.c:525:13:lcm_get_params	32	static
+nt35596_fhd_dsi_vdo_tm.c:519:13:lcm_set_util_funcs	16	static
+nt35596_fhd_dsi_vdo_tm.c:394:13:push_table.constprop	48	static
+nt35596_fhd_dsi_vdo_tm.c:471:13:lcm_setbacklight	32	static
+nt35596_fhd_dsi_vdo_tm.c:496:13:lcm_esd_recover_backlight	32	static
+nt35596_fhd_dsi_vdo_tm.c:225:16:get_backlihgtic_dimming_setp	48	static
+nt35596_fhd_dsi_vdo_tm.c:242:16:set_backlihgtic_dimming_setp	112	static
+nt35596_fhd_dsi_vdo_tm.c:192:5:tps65132_write_bytes	48	static
+nt35596_fhd_dsi_vdo_tm.c:416:6:TC358768_DCS_write_1A_1P	80	static
+nt35596_fhd_dsi_vdo_tm.c:589:13:lcm_init	96	static
+nt35596_fhd_dsi_vdo_tm.c:787:13:lcm_resume	16	static

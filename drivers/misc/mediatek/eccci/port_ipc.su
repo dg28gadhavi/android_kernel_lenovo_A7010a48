@@ -1,0 +1,17 @@
+port_ipc.c:61:12:port_ipc_ack_init	0	static
+port_ipc.c:188:6:port_ipc_md_state_notice	16	static
+port_ipc.c:66:12:port_ipc_ack_recv_req	48	static
+port_ipc.c:91:5:port_ipc_req_match	32	static
+port_ipc.c:508:12:port_ipc_kernel_recv_req	64	static
+port_ipc.c:256:12:port_ipc_parse_gf_port	64	static
+port_ipc.c:542:12:port_ipc_kernel_thread	176	static
+port_ipc.c:596:12:port_ipc_kernel_init	64	static
+port_ipc.c:109:5:port_ipc_tx_wait	96	static
+port_ipc.c:120:5:port_ipc_rx_ack	16	static
+port_ipc.c:202:5:port_ipc_write_check_id	16	static
+port_ipc.c:435:12:port_ipc_kernel_write	80	static
+port_ipc.c:623:5:send_new_time_to_md	144	static
+port_ipc.c:129:5:port_ipc_ioctl	112	static
+port_ipc.c:215:14:port_ipc_poll	48	static
+port_ipc.c:231:5:port_ipc_init	48	static
+port_ipc.c:317:5:ccci_ipc_set_garbage_filter	112	static

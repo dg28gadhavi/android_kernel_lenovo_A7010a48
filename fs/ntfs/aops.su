@@ -1,0 +1,5 @@
+aops.c:1563:17:ntfs_bmap	80	static
+aops.c:58:13:ntfs_end_buffer_async_read	80	static
+aops.c:398:12:ntfs_readpage	272	static
+aops.c:1353:12:ntfs_writepage	384	dynamic
+aops.c:1729:6:mark_ntfs_record_dirty	80	static

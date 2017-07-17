@@ -1,0 +1,2 @@
+debug.c:43:6:__ntfs_warning	144	static
+debug.c:86:6:__ntfs_error	144	static

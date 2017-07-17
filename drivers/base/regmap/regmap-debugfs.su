@@ -1,0 +1,11 @@
+regmap-debugfs.c:404:16:regmap_access_read_file	192	static
+regmap-debugfs.c:272:16:regmap_map_write_file	96	static
+regmap-debugfs.c:39:16:regmap_name_read_file	64	static
+regmap-debugfs.c:85:21:regmap_debugfs_get_dump_start.part.1	96	static
+regmap-debugfs.c:331:16:regmap_reg_ranges_read_file	128	static
+regmap-debugfs.c:185:16:regmap_read_debugfs	128	static
+regmap-debugfs.c:315:16:regmap_range_read_file	16	static
+regmap-debugfs.c:255:16:regmap_map_read_file	16	static
+regmap-debugfs.c:472:6:regmap_debugfs_init	48	static
+regmap-debugfs.c:557:6:regmap_debugfs_exit	48	static
+regmap-debugfs.c:580:6:regmap_debugfs_initcall	48	static

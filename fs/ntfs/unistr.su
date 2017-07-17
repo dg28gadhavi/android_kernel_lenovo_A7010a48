@@ -1,0 +1,9 @@
+unistr.c:97:5:ntfs_collate_names	0	static
+unistr.c:149:5:ntfs_ucsncmp	0	static
+unistr.c:185:5:ntfs_ucsncasecmp	0	static
+unistr.c:68:6:ntfs_are_names_equal	16	static
+unistr.c:206:6:ntfs_upcase_name	0	static
+unistr.c:217:6:ntfs_file_upcase_value	0	static
+unistr.c:224:5:ntfs_file_compare_values	16	static
+unistr.c:259:5:ntfs_nlstoucs	112	static
+unistr.c:336:5:ntfs_ucstonls	112	static

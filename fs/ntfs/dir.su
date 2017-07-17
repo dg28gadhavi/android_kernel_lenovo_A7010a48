@@ -1,0 +1,4 @@
+dir.c:1464:12:ntfs_dir_open	0	static
+dir.c:1500:12:ntfs_dir_fsync	96	static
+dir.c:1099:12:ntfs_readdir	256	static
+dir.c:80:9:ntfs_lookup_inode_by_name	176	static

@@ -1,0 +1,4 @@
+auddrv_devtree_parser.c:47:23:GetI2SSetting	0	static
+auddrv_devtree_parser.c:310:6:Auddrv_DevTree_I2S_Setting	64	static
+auddrv_devtree_parser.c:359:6:Auddrv_Devtree_Dump	80	static
+auddrv_devtree_parser.c:57:6:Auddrv_Devtree_Init	64	static

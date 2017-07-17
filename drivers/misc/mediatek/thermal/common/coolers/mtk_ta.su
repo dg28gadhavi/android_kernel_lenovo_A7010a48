@@ -1,0 +1,9 @@
+mtk_ta.c:127:13:ta_nl_send_to_user	80	static
+mtk_ta.c:254:12:tsta_open_log	16	static
+mtk_ta.c:217:12:tsta_read_log	16	static
+mtk_ta.c:226:16:tsta_write_log	96	static
+mtk_ta.c:285:19:ta_init	96	static
+mtk_ta.c:62:6:atm_ctrl_cmd_from_user	32	static
+mtk_ta.c:161:13:ta_nl_data_handler	64	static
+mtk_ta.c:120:5:ta_get_ttj	32	static
+mtk_ta.c:194:5:wakeup_ta_algo	48	static

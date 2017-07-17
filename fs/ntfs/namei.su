@@ -1,0 +1,5 @@
+namei.c:351:22:ntfs_nfs_get_inode	32	static
+namei.c:103:23:ntfs_lookup	112	static
+namei.c:300:23:ntfs_get_parent	64	static
+namei.c:374:23:ntfs_fh_to_parent	16	static
+namei.c:367:23:ntfs_fh_to_dentry	16	static

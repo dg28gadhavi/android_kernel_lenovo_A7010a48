@@ -1,0 +1,4 @@
+arizona-spi.c:150:1:arizona_spi_driver_init	16	static
+arizona-spi.c:114:12:arizona_spi_remove	16	static
+arizona-spi.c:26:12:arizona_spi_probe	48	static
+arizona-spi.c:150:1:arizona_spi_driver_exit	16	static

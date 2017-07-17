@@ -1,0 +1,8 @@
+runlist.c:531:18:ntfs_runlists_merge	160	static
+runlist.c:749:18:ntfs_mapping_pairs_decompress	128	static
+runlist.c:1004:5:ntfs_rl_vcn_to_lcn	16	static
+runlist.c:1053:18:ntfs_rl_find_vcn_nolock	16	static
+runlist.c:1131:5:ntfs_get_size_for_mapping_pairs	16	static
+runlist.c:1323:5:ntfs_mapping_pairs_build	32	static
+runlist.c:1499:5:ntfs_rl_truncate_nolock	80	static
+runlist.c:1644:5:ntfs_rl_punch_nolock	112	static

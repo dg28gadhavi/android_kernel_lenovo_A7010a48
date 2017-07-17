@@ -1,0 +1,12 @@
+spi-bitbang.c:141:5:spi_bitbang_setup_transfer	0	static
+spi-bitbang.c:237:12:spi_bitbang_bufs	16	static
+spi-bitbang.c:115:17:bitbang_txrx_32	96	static
+spi-bitbang.c:89:17:bitbang_txrx_16	96	static
+spi-bitbang.c:63:17:bitbang_txrx_8	80	static
+spi-bitbang.c:503:12:spi_bitbang_unprepare_hardware	32	static
+spi-bitbang.c:259:12:spi_bitbang_prepare_hardware	32	static
+spi-bitbang.c:183:5:spi_bitbang_setup	48	static
+spi-bitbang.c:231:6:spi_bitbang_cleanup	16	static
+spi-bitbang.c:274:12:spi_bitbang_transfer_one	96	static
+spi-bitbang.c:547:5:spi_bitbang_start	32	static
+spi-bitbang.c:593:6:spi_bitbang_stop	16	static

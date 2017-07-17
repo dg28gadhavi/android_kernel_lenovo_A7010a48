@@ -1,0 +1,4 @@
+mt_spm_vcore_dvfs_3.c:156:13:__go_to_vcore_dvfs.constprop	64	static
+mt_spm_vcore_dvfs_3.c:116:7:spm_dump_vcore_dvs_regs	32	static
+mt_spm_vcore_dvfs_3.c:210:5:spm_set_vcore_dvs_voltage	80	static
+mt_spm_vcore_dvfs_3.c:286:6:spm_go_to_vcore_dvfs	48	static
