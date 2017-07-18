@@ -1,6 +1,6 @@
 #!/bin/sh
 echo " Negative kernel by DG "
-export KBUILD_BUILD_USER="Dhruv"
+export KBUILD_BUILD_USER="Darkness"
 export KBUILD_BUILD_HOST="Negative"
 export CROSS_COMPILE="/home/darkness/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
 
