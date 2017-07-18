@@ -5,9 +5,9 @@ namei.c:1163:12:follow_dotdot_rcu	48	static
 namei.c:1036:12:follow_managed	96	static
 namei.c:1320:23:lookup_dcache	80	static
 namei.c:4462:6:page_put_link	16	static
-namei.c:684:13:path_put_conditional.isra.21	48	static
+namei.c:684:13:path_put_conditional.isra.22	48	static
 namei.c:1536:13:terminate_walk	32	static
-namei.c:2167:5:user_path_at_empty.part.26	16	static
+namei.c:2167:5:user_path_at_empty.part.27	16	static
 namei.c:4454:7:page_follow_link_light	32	static
 namei.c:1379:23:__lookup_hash	64	static
 namei.c:4409:5:generic_readlink	224	static
@@ -17,7 +17,7 @@ namei.c:134:1:getname_flags	80	static
 namei.c:210:1:getname	16	static
 namei.c:220:1:getname_kernel	32	static
 namei.c:245:6:putname	32	static
-namei.c:323:5:generic_permission	64	static
+namei.c:323:5:generic_permission	48	static
 namei.c:397:5:__inode_permission	48	static
 namei.c:2562:12:may_open	48	static
 namei.c:453:5:inode_permission	16	static
