@@ -1,9 +1,9 @@
 xattr.c:699:1:xattr_resolve_name	0	static
 xattr.c:32:1:xattr_permission	48	static
 xattr.c:92:5:__vfs_setxattr_noperm	80	static
+xattr.c:122:1:vfs_setxattr	80	static
 xattr.c:322:1:setxattr	336	static
 xattr.c:367:12:path_setxattr	96	static
-xattr.c:122:1:vfs_setxattr	80	static
 xattr.c:146:1:xattr_getsecurity	64	static
 xattr.c:181:1:vfs_getxattr_alloc	80	static
 xattr.c:212:5:vfs_xattr_cmp	64	static

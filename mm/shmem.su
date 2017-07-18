@@ -25,7 +25,7 @@ shmem.c:2996:5:shmem_fill_super	48	static
 shmem.c:3211:23:shmem_mount	16	static
 shmem.c:3092:13:shmem_init_inode	16	static
 shmem.c:3328:21:__shmem_file_setup	112	static
-shmem.c:964:12:shmem_replace_page.isra.42	96	static
+shmem.c:964:12:shmem_replace_page.isra.40	96	static
 shmem.c:2709:12:shmem_encode_fh	48	static
 shmem.c:2282:12:shmem_link	64	static
 shmem.c:749:12:shmem_writepage	96	static
