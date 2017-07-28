@@ -336,10 +336,8 @@ static int ext4_update_inline_data(handle_t *handle, struct inode *inode,
 
 	len -= EXT4_MIN_INLINE_DATA_SIZE;
 	value = kzalloc(len, GFP_NOFS);
-	if (!value) {
-		error = -ENOMEM;
+	if (!value)
 		goto out;
-	}
 
 	error = ext4_xattr_ibody_get(inode, i.name_index, i.name,
 				     value, len);
@@ -994,11 +992,12 @@ void ext4_show_inline_dir(struct inode *dir, struct buffer_head *bh,
  */
 static int ext4_add_dirent_to_inline(handle_t *handle,
 				     struct ext4_filename *fname,
-				     struct inode *dir,
+				     struct dentry *dentry,
 				     struct inode *inode,
 				     struct ext4_iloc *iloc,
 				     void *inline_start, int inline_size)
 {
+	struct inode	*dir = dentry->d_parent->d_inode;
 	int		err;
 	struct ext4_dir_entry_2 *de;
 
@@ -1147,9 +1146,10 @@ static int ext4_finish_convert_inline_dir(handle_t *handle,
 	set_buffer_uptodate(dir_block);
 	err = ext4_handle_dirty_dirent_node(handle, inode, dir_block);
 	if (err)
-		return err;
+		goto out;
 	set_buffer_verified(dir_block);
-	return ext4_mark_inode_dirty(handle, inode);
+out:
+	return err;
 }
 
 static int ext4_convert_inline_data_nolock(handle_t *handle,
@@ -1242,11 +1242,12 @@ out:
  * the new created block.
  */
 int ext4_try_add_inline_entry(handle_t *handle, struct ext4_filename *fname,
-			      struct inode *dir, struct inode *inode)
+			      struct dentry *dentry, struct inode *inode)
 {
 	int ret, inline_size;
 	void *inline_start;
 	struct ext4_iloc iloc;
+	struct inode *dir = dentry->d_parent->d_inode;
 
 	ret = ext4_get_inode_loc(dir, &iloc);
 	if (ret)
@@ -1260,7 +1261,7 @@ int ext4_try_add_inline_entry(handle_t *handle, struct ext4_filename *fname,
 						 EXT4_INLINE_DOTDOT_SIZE;
 	inline_size = EXT4_MIN_INLINE_DATA_SIZE - EXT4_INLINE_DOTDOT_SIZE;
 
-	ret = ext4_add_dirent_to_inline(handle, fname, dir, inode, &iloc,
+	ret = ext4_add_dirent_to_inline(handle, fname, dentry, inode, &iloc,
 					inline_start, inline_size);
 	if (ret != -ENOSPC)
 		goto out;
@@ -1281,7 +1282,7 @@ int ext4_try_add_inline_entry(handle_t *handle, struct ext4_filename *fname,
 	if (inline_size) {
 		inline_start = ext4_get_inline_xattr_pos(dir, &iloc);
 
-		ret = ext4_add_dirent_to_inline(handle, fname, dir,
+		ret = ext4_add_dirent_to_inline(handle, fname, dentry,
 						inode, &iloc, inline_start,
 						inline_size);
 
