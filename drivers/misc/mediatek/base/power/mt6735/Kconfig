@@ -6,3 +6,27 @@ config CPU_DVFS_SYSTEM_BOOTUP_BOOST
 		CPU_DVFS_SYSTEM_BOOTUP_BOOST is used to enhance system bootup time by fixing
 		CPU at max CPU frequency before bootup procedure finished. Say y here to enable
 		it and say n to disable it.
+
+menu "MTK Support Overclock"
+
+ config MT_CPUFREQ_OC
+        bool "CPU_OVERCLOCK"
+        default n
+        help
+                Select this to Overclock MT6753 to 1.5 GHz
+
+ config MT_GPUFREQ_OC
+        bool "GPU_OVERCLOCK"
+        default n
+        help
+
+                Select this to Overclock Mali-T720 to 600 MHz
+
+config MORE_FREQ
+       bool "MORE_FREQUENCIES"
+       depends on CPU_OC
+       default n
+       help
+                More frequencies for choice
+
+endmenu
