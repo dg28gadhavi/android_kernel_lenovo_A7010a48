@@ -55,7 +55,7 @@ obj-$(CONFIG_ARCH_MT6753) += mt_vcore_dvfs_3.o
 obj-$(CONFIG_ARCH_MT6753) += mt_spm_vcore_dvfs_3.o
 obj-y += mt_static_power.o
 ifeq ($(CONFIG_MT_CPUFREQ_OC),y)
-obj-y += mt_cpufreq.o
+obj-y += mt_cpufreq_oc.o
 obj-y += mt_cpu_ss.o
 else
 obj-y += mt_cpufreq.o
