@@ -1,2 +1,8 @@
-This version kernel for only Lenovo A7010, this kernel based on original 3.18.35 mediatek source code
+This version kernel for only Lenovo A7010a48, this kernel based on original 3.18.35 mediatek source code
 Credits by Zormax
+
+Reference To Toolchain I Use here :
+https://github.com/nathanchance/gcc-prebuilts
+
+Command to clone it :
+git clone https://android.git.linaro.org/git-ro/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-7.x-linaro.git
