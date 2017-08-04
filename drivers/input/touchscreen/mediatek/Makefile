@@ -14,6 +14,10 @@ obj-y   +=  tpd_setting.o
 ifeq ($(CONFIG_TOUCHSCREEN_MTK_FTS5446),y)
 obj-y	+=  ft5446/
 endif
+
+ifeq ($(CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT),y)
+obj-y   +=  GT9XX_hotknot/
+endif
 obj-$(CONFIG_TOUCHSCREEN_MTK_GT1151)	+=  GT1151/
 obj-$(CONFIG_TOUCHSCREEN_MTK_GT910)	+=  GT910/
 obj-$(CONFIG_TOUCHSCREEN_MTK_GT9XXTB_HOTKNOT)	+=  GT9XXTB_hotknot/

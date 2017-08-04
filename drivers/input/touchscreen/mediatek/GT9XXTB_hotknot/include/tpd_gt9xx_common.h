@@ -112,8 +112,8 @@ extern unsigned char gtp_default_FW_fl[];
 #define GTP_CONFIG_MAX_LENGTH       240
 #define GTP_CHARGER_SWITCH    0       // charger plugin & plugout detect
 #define GTP_WITH_PEN          0
-#define GTP_SLIDE_WAKEUP      0
-#define GTP_DBL_CLK_WAKEUP    0       // double-click wakup, function together with GTP_SLIDE_WAKEUP
+#define GTP_SLIDE_WAKEUP      1
+#define GTP_DBL_CLK_WAKEUP    1       // double-click wakup, function together with GTP_SLIDE_WAKEUP
 #define HOTKNOT_BLOCK_RW      0
 
 //#define TPD_PROXIMITY
