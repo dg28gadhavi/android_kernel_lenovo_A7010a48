@@ -60,6 +60,10 @@ core-$(CONFIG_XEN) += arch/arm64/xen/
 core-$(CONFIG_CRYPTO) += arch/arm64/crypto/
 # lenovo-sw zhouwl, for wm8281 begin
 core-y		+=arch/arm64/mach-mtk/
+
+#hotplugs
+core-y += arch/arm64/hotplug/
+
 # lenovo-sw zhouwl, for wm8281 end
 libs-y		:= arch/arm64/lib/ $(libs-y)
 libs-y		+= $(LIBGCC)
