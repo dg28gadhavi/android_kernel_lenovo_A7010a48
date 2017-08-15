@@ -31,15 +31,15 @@
 #include <linux/kthread.h>
 #include <linux/slab.h>
 
-#ifdef CONFIG_ARCH_MT6755
-#include "../misc/mediatek/base/power/mt6755/mt_cpufreq.h"
+#ifdef CONFIG_ARCH_MT6752
+#include "../misc/mediatek/base/power/mt6752/mt_cpufreq.h"
 #endif
 
-#ifdef CONFIG_ARCH_MT6797
-#include "../misc/mediatek/base/power/mt6797/mt_cpufreq.h"
+#ifdef CONFIG_ARCH_MT6753
+#include "../misc/mediatek/base/power/mt6735/mt_cpufreq.h"
 #endif
 
-#if (defined CONFIG_ARCH_MT6755) || (defined CONFIG_ARCH_MT6797)
+#if (defined CONFIG_ARCH_MT6752) || (defined CONFIG_ARCH_MT6753)
 #include <asm/topology.h>
 unsigned int hispeed_freq_perf = 0;
 unsigned int min_sample_time_perf = 0;
@@ -78,7 +78,7 @@ static spinlock_t speedchange_cpumask_lock;
 static struct mutex gov_lock;
 
 /* Target load.  Lower values result in higher CPU speeds. */
-#define DEFAULT_TARGET_LOAD 90
+#define DEFAULT_TARGET_LOAD 85
 static unsigned int default_target_loads[] = {DEFAULT_TARGET_LOAD};
 
 #define DEFAULT_TIMER_RATE (20 * USEC_PER_MSEC)
@@ -91,7 +91,7 @@ struct cpufreq_interactive_tunables {
 	/* Hi speed to bump to from lo speed when load burst (default max) */
 	unsigned int hispeed_freq;
 	/* Go to hi speed when CPU load at or above this value. */
-#define DEFAULT_GO_HISPEED_LOAD 99
+#define DEFAULT_GO_HISPEED_LOAD 95
 	unsigned long go_hispeed_load;
 	/* Target load. Lower values result in higher CPU speeds. */
 	spinlock_t target_loads_lock;
@@ -101,7 +101,7 @@ struct cpufreq_interactive_tunables {
 	 * The minimum amount of time to spend at a frequency before we can ramp
 	 * down.
 	 */
-#define DEFAULT_MIN_SAMPLE_TIME (80 * USEC_PER_MSEC)
+#define DEFAULT_MIN_SAMPLE_TIME (45 * USEC_PER_MSEC)
 	unsigned long min_sample_time;
 	/*
 	 * The sample rate of the timer used to increase frequency
@@ -326,13 +326,13 @@ static u64 update_load(int cpu)
 		pcpu->policy->governor_data;
 	u64 now;
 	u64 now_idle;
-	unsigned int delta_idle;
-	unsigned int delta_time;
+	u64 delta_idle;
+	u64 delta_time;
 	u64 active_time;
 
 	now_idle = get_cpu_idle_time(cpu, &now, tunables->io_is_busy);
-	delta_idle = (unsigned int)(now_idle - pcpu->time_in_idle);
-	delta_time = (unsigned int)(now - pcpu->time_in_idle_timestamp);
+	delta_idle = (now_idle - pcpu->time_in_idle);
+	delta_time = (now - pcpu->time_in_idle_timestamp);
 
 	if (delta_time <= delta_idle)
 		active_time = 0;
@@ -362,13 +362,9 @@ static void cpufreq_interactive_timer(unsigned long data)
 	unsigned long flags;
 	u64 max_fvtime;
 
-#if (defined CONFIG_ARCH_MT6755) || (defined CONFIG_ARCH_MT6797)
-#ifdef CONFIG_ARCH_MT6797
+#if (defined CONFIG_ARCH_MT6752) || (defined CONFIG_ARCH_MT6753)
 	/* Default, low power, just make, performance */
-	int freq_idx[4] = {7, 11, 8, 0};
-#else
 	int freq_idx[4] = {2, 6, 4, 0};
-#endif
 	int ppb_idx;
 	int min_sample_t[4] = {80, 20, 20, 80};
 #endif
@@ -393,7 +389,7 @@ static void cpufreq_interactive_timer(unsigned long data)
 	cpu_load = loadadjfreq / pcpu->policy->cur;
 	tunables->boosted = tunables->boost_val || now < tunables->boostpulse_endtime;
 
-#if (defined CONFIG_ARCH_MT6755) || (defined CONFIG_ARCH_MT6797)
+#if 0 //(defined CONFIG_ARCH_MT6752) || (defined CONFIG_ARCH_MT6753)
 	ppb_idx = mt_cpufreq_get_ppb_state();
 
 	/* Not to modify if L in default mode */
@@ -833,7 +829,7 @@ static ssize_t store_hispeed_freq(struct cpufreq_interactive_tunables *tunables,
 		return ret;
 	tunables->hispeed_freq = val;
 
-#if (defined CONFIG_ARCH_MT6755) || (defined CONFIG_ARCH_MT6797)
+#if (defined CONFIG_ARCH_MT6752) || (defined CONFIG_ARCH_MT6753)
 	hispeed_freq_perf = val;
 #endif
 
@@ -876,7 +872,7 @@ static ssize_t store_min_sample_time(struct cpufreq_interactive_tunables
 		return ret;
 	tunables->min_sample_time = val;
 
-#if (defined CONFIG_ARCH_MT6755) || (defined CONFIG_ARCH_MT6797)
+#if (defined CONFIG_ARCH_MT6752) || (defined CONFIG_ARCH_MT6753)
 	min_sample_time_perf = val;
 #endif
 
