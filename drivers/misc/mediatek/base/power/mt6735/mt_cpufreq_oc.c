@@ -714,14 +714,19 @@ static struct mt_cpu_freq_info opp_tbl_e1_0[] = {
 /* CPU LEVEL 1, 1.3GHz segment */
 static struct mt_cpu_freq_info opp_tbl_e1_1[] = {
         OP(CPU_DVFS_FREQ0, 125000),
-        OP(CPU_DVFS_FREQ1, 121250),
-        OP(CPU_DVFS_FREQ2, 120000),
+        OP(CPU_DVFS_FREQ1, 125000),
+	OP(CPU_DVFS_FREQ1_2, 121250),
+	OP(CPU_DVFS_FREQ2, 123125),
+        OP(CPU_DVFS_FREQ3_1, 120000),
         OP(CPU_DVFS_FREQ3, 118125),
-        OP(CPU_DVFS_FREQ4, 115000),
-        OP(CPU_DVFS_FREQ5, 108750),
-        OP(CPU_DVFS_FREQ6, 103125),
-        OP(CPU_DVFS_FREQ7, 99375),
-        OP(CPU_DVFS_FREQ8, 95000),
+	OP(CPU_DVFS_FREQ4, 115000),
+	OP(CPU_DVFS_FREQ5, 110000),
+        OP(CPU_DVFS_FREQ5_2, 108750),
+        OP(CPU_DVFS_FREQ6_1, 103125),
+	OP(CPU_DVFS_FREQ6, 105000),
+	OP(CPU_DVFS_FREQ7, 100000),
+        OP(CPU_DVFS_FREQ7_2, 99375),
+	OP(CPU_DVFS_FREQ8, 95000),
 };
 
 static struct opp_tbl_info opp_tbls[] = {
