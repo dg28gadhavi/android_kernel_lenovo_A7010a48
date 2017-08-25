@@ -713,9 +713,11 @@ static struct mt_cpu_freq_info opp_tbl_e1_0[] = {
 
 /* CPU LEVEL 1, 1.3GHz segment */
 static struct mt_cpu_freq_info opp_tbl_e1_1[] = {
+        OP(CPU_DVFS_FREQ0, 125000),
 	OP(CPU_DVFS_FREQ1, 125000),
 	OP(CPU_DVFS_FREQ2, 123125),
 	OP(CPU_DVFS_FREQ3_1, 120000),
+        OP(CPU_DVFS_FREQ3, 118125),
 	OP(CPU_DVFS_FREQ4, 115000),
 	OP(CPU_DVFS_FREQ5, 110000),
 	OP(CPU_DVFS_FREQ6, 105000),
